@@ -1,0 +1,134 @@
+xdg-open "file_path"
+
+globbing 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mkdir demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ touch IMG_6677.MOV IMG_6677.SRT 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ ls
+demo  demo2  IMG_6677.MOV  IMG_6677.SRT  re1.pdf  re2.jpg  re3.pptx
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mv IMG_[1-9] ./demo2
+mv: cannot stat 'IMG_[1-9]': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mv IMG_6677.*  ./demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ ls demo2
+IMG_6677.MOV  IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ echo IMG?6677.*
+IMG?6677.*
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ cd demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_6677.MOV  IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG?6677.*
+IMG_6677.MOV IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ touch IMG_234.jpg IMG_6677.jpg IMG_6678.JPG 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ LS
+LS: command not found
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_6677.jpg  IMG_6677.MOV  IMG_6677.SRT  IMG_6678.JPG
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ touch IMG_34.jpg IMG_5678.jpg IMG_6679.jpg 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_5678.jpg  IMG_6677.MOV  IMG_6678.JPG
+IMG_34.jpg   IMG_6677.jpg  IMG_6677.SRT  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ xdg-open ./
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_34.jpg  IMG_5678.jpg  IMG_6677.jpg  IMG_6677.MOV  IMG_6677.SRT  IMG_6678.JPG  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_[0-9][0-9][0-9].*
+IMG_234.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_*
+IMG_234.jpg IMG_34.jpg IMG_5678.jpg IMG_6677.jpg IMG_6677.MOV IMG_6677.SRT IMG_6678.JPG IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_2*
+IMG_234.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ cd ~
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop           Music             Pictures    test-repo
+ Documents         my_venv           Public      Videos
+ Downloads         nkt_moving_repo   snap       'virtubox asst'
+ mkt_moving_repo   notes.txt         Templates   vscode
+shivam@shivam-Bravo-15-B5DD:~$ rmdir nkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop     mkt_moving_repo   notes.txt   snap        Videos
+ Documents   Music             Pictures    Templates  'virtubox asst'
+ Downloads   my_venv           Public      test-repo   vscode
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo
+moving_repo
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop     mkt_moving_repo   notes.txt   snap        Videos
+ Documents   Music             Pictures    Templates  'virtubox asst'
+ Downloads   my_venv           Public      test-repo   vscode
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo/moving_repo
+demo  demo2  re1.pdf  re2.jpg  re3.pptx
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo/moving_repo/demo2
+IMG_234.jpg  IMG_5678.jpg  IMG_6677.MOV  IMG_6678.JPG
+IMG_34.jpg   IMG_6677.jpg  IMG_6677.SRT  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~$ 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mkdir 'testing globbing'
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ lssh
+ moving_repo  'testing globbing'
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ echo **/*.jpg
+moving_repo/demo2/IMG_234.jpg moving_repo/demo2/IMG_34.jpg moving_repo/demo2/IMG_5678.jpg moving_repo/demo2/IMG_6677.jpg moving_repo/demo2/IMG_6679.jpg moving_repo/re2.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mv **/*.jpg  ./testing_globbing
+mv: target './testing_globbing': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mv **/*.jpg  ./testing\ globbing/
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ ls
+ moving_repo  'testing globbing'
+
+--------------------------------------------------------SECTION 6 (EX. 60) -------------------------------------------------------------------
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ sudo -s globstar
+[sudo] password for shivam: 
+/bin/bash: line 1: globstar: command not found
+shivam@shivam-Bravo-15-B5DD:~/linux$ shopt -s globstar
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.pdf
+CompanyShare/Purchasing/01 - January/Invoice.pdf CompanyShare/Purchasing/02 - February/important-invoice.pdf CompanyShare/Sales/02 - February/Balance-Sheet-February.pdf CompanyShare/Sales/03 - March/Additional-Invoice-March.pdf mkt_moving_repo/moving_repo/re1.pdf
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.xlsx
+CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.xlsx */**/*.xlsx
+CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd /companyShare
+bash: cd: /companyShare: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd CompanyShare
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ mkdir Export
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ cd ..
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd ComapnyShare/Export
+bash: cd: ComapnyShare/Export: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd CompanyShare
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ ls
+Export  Purchasing  Sales
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ cd Export
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ ls
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ echo */**/*.xlsx */**/*.xlsx .
+*/**/*.xlsx */**/*.xlsx .
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ mv  */**/*.xlsx */**/*.xlsx .
+mv: cannot stat '*/**/*.xlsx': No such file or directory
+mv: cannot stat '*/**/*.xlsx': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ cd ~
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop   Documents   Downloads   linux   Music   my_venv   notes.txt   Pictures   Public   resume   snap   Templates   test-repo   Videos  'virtubox asst'   vscode
+shivam@shivam-Bravo-15-B5DD:~$ cd linux
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv  */**/*.xlsx */**/*.xlsx ~/linux/CompanyShare/Export
+mv: cannot stat 'CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/02 - February/additional-table.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/02 - February/important-business-figures.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Sales/01 - January/Sales-January.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Sales/03 - March/Sales-March.xlsx': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv  */**/*.pdf  ~/linux/CompanyShare/Export
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd Export
+bash: cd: Export: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd ./CompanyShare/Export/
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ ls
+ Additional-Invoice-March.pdf   Balance-Sheet-February.pdf   important-business-figures.xlsx   Invoice.pdf               re1.pdf              Sales-March.xlsx
+ additional-table.xlsx         'Balance Sheet.xlsx'          important-invoice.pdf             numbers-from-march.xlsx   Sales-January.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ 
+
+---------------------------------------------------SECTION 7----------------------------------------------------------------------------------------------------
+
+
+
