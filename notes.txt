@@ -131,4 +131,190 @@ shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$
 ---------------------------------------------------SECTION 7----------------------------------------------------------------------------------------------------
 
 
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n romeo.txt
+head: invalid number of lines: ‘romeo.txt’
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n 5 romeo.txt
+The Project Gutenberg eBook of Romeo and Juliet, by William Shakespeare
 
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+shivam@shivam-Bravo-15-B5DD:~/linux$ tail -n 5 romeo.txt
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ head romeo.txt
+The Project Gutenberg eBook of Romeo and Juliet, by William Shakespeare
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org. If you are not located in the United States, you
+will have to check the laws of the country where you are located before
+using this eBook.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ tail romeo.txt
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org.
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ less romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc file.txt
+wc: file.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc romeo.txt
+  5642  29003 169353 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -l romeo.txt
+5642 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -w romeo.txt
+29003 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -c romeo.txt
+169353 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$
+---------------------------------------------------------------------------nano/ pico command for text editing basics ------------------------- 
+CompanyShare  __MACOSX  mkt_moving_repo  notes.txt  romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+------------------------------------------------------------------------------------EXERCISE WORK---------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls ./assingnments/
+log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv assingnments ./assignment
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+ assignment     __MACOSX          notes.txt       romeo.txt
+ CompanyShare   mkt_moving_repo  'os(mod3).txt'
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls  ./assignment
+log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -h ./assignment/log_file.txt 
+wc: invalid option -- 'h'
+Try 'wc --help' for more information.
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -c ./assignment/log_file.txt 
+2632429 ./assignment/log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc --help
+Usage: wc [OPTION]... [FILE]...
+  or:  wc [OPTION]... --files0-from=F
+Print newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified.  A word is a non-zero-length sequence of
+printable characters delimited by white space.
+
+With no FILE, or when FILE is -, read standard input.
+
+The options below may be used to select which counts are printed, always in
+the following order: newline, word, character, byte, maximum line length.
+  -c, --bytes            print the byte counts
+  -m, --chars            print the character counts
+  -l, --lines            print the newline counts
+      --files0-from=F    read input from the files specified by
+                           NUL-terminated names in file F;
+                           If F is - then read names from standard input
+  -L, --max-line-length  print the maximum display width
+  -w, --words            print the word counts
+      --total=WHEN       when to print a line with total counts;
+                           WHEN can be: auto, always, only, never
+      --help        display this help and exit
+      --version     output version information and exit
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/wc>
+or available locally via: info '(coreutils) wc invocation'
+shivam@shivam-Bravo-15-B5DD:~/linux$ du  -c ./assignment/log_file.txt 
+2572	./assignment/log_file.txt
+2572	total
+shivam@shivam-Bravo-15-B5DD:~/linux$ du  -h  ./assignment/log_file.txt 
+2.6M	./assignment/log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ less ./a
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n 1  ./assignment/log_file.txt 
+243.100.182.64 - - 11/Jul/2049:17:31:52 +0000 "GET /register.html HTTP/1.1" 200 1525 "https://www.invisible-ink-inc.com/spy-lab.html" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
+
+------------------------------------------------SECTION 8 --------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing'
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:25 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+-rw-rw-r-- 1 shivam shivam 0 Jun 22 13:25 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob" > output.txt
+> ^C
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt >> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob' >> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo.txt
+168K	romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo1.txt
+du: cannot access 'romeo1.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo1.txt >> ouptput.txt
+du: cannot access 'romeo1.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Redirection- Manage Data Streams 
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls 
+error.txt  IMG_01.png  log_file.txt  output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ touch IMG_02.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png 1> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png 1> output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png 2> error.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt ; cat output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt ; cat output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt ; cat error.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ nano output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls output.txt
+output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ xdg-open "output.txt"
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png 1> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ 
+--------------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01
+du: cannot access 'IMG_03.png': No such file or directory
+du: cannot access 'IMG_01': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2> dev/null >> output.txt
+bash: dev/null: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2>/dev/null >> output.txt
