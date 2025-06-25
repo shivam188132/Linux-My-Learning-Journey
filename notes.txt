@@ -318,3 +318,44 @@ du: cannot access 'IMG_01': No such file or directory
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2> dev/null >> output.txt
 bash: dev/null: No such file or directory
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2>/dev/null >> output.txt
+--------------------------------------------------Redirectiong stdout to stderr-------------------------------------------------------------------
+| Command                        | stdout goes to | stderr goes to | Notes                   |
+| ------------------------------ | -------------- | -------------- | ----------------------- |
+| `command > out.txt 2>&1`       | out.txt        | out.txt        | ✅ both in one file      |
+| `command 2>&1 > out.txt`       | out.txt        | terminal       | ❌ not combined          |
+| `command &> out.txt`           | out.txt        | out.txt        | ✅ shorthand (Bash only) |
+| `command > out.txt`            | out.txt        | terminal       | Only stdout in file     |
+| `command 2> err.txt`           | terminal       | err.txt        | Only stderr in file     |
+| `command > out.txt 2> err.txt` | out.txt        | err.txt        | Separate files for each |
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l
+This is bash!
+another line ..
+2
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat
+Hello from Bash!
+Hello from Bash!
+...........
+...........
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt  testing.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat testing.txt
+192K	IMG_01.png
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l < out.txt
+bash: out.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l < output.txt
+2
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat - < output.txt
+192K	IMG_01.png
+du: cannot access 'IMG_O4.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat - < output.txt > another.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat another.txt
+192K	IMG_01.png
+du: cannot access 'IMG_O4.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+another.txt  error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt  testing.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ 
+
+
