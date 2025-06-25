@@ -1,1 +1,2 @@
 192K	IMG_01.png
+du: cannot access 'IMG_O4.png': No such file or directory
