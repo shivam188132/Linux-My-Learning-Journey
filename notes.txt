@@ -357,5 +357,24 @@ du: cannot access 'IMG_O4.png': No such file or directory
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
 another.txt  error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt  testing.txt
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ 
+------------------------------------------------------------SECTION 9 -------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ cat output.txt
+file1.txt
+file2.txt
+file3.txt
+output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ wc -l output.txt
+4 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ rm output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
