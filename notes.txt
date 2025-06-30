@@ -397,3 +397,103 @@ du: cannot access 'file-not-exist.txt': No such file or directory
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt 2>&1 > /dev/null | wc -l 
 1
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ echo 'Hello World' | tee hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls 
+file1.txt  file2.txt  file3.txt  hello.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ echo 'Hello World' | tee hello.txt | wc -c
+12
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc hello.txt
+ 1  2 12 hello.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com
+PING google.com (142.250.77.238) 56(84) bytes of data.
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=1 ttl=119 time=7.45 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=2 ttl=119 time=7.23 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=3 ttl=119 time=9.38 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=4 ttl=119 time=11.4 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=5 ttl=119 time=7.43 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=6 ttl=119 time=49.4 ms
+^C
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5007ms
+rtt min/avg/max/mdev = 7.229/15.376/49.417/15.292 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com 2>&1 
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com 2>&1 > ping.txt
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls
+file1.txt  file2.txt  file3.txt  hello.txt  ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc -c ping.txt
+0 ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com > ping.txt 2>&1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com 2>&1 > tee ping.txt
+ping: ping.txt: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com 2>&1 | tee ping.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=10.4 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=20.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=25.0 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=11.2 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.94 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=16.6 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=7 ttl=119 time=8.90 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=8 ttl=119 time=6.58 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=9 ttl=119 time=8.24 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=10 ttl=119 time=7.67 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=11 ttl=119 time=21.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=12 ttl=119 time=5.99 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=13 ttl=119 time=9.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=14 ttl=119 time=118 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=15 ttl=119 time=9.38 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=16 ttl=119 time=11.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=17 ttl=119 time=8.11 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=18 ttl=119 time=7.32 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=19 ttl=119 time=9.35 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=20 ttl=119 time=8.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=21 ttl=119 time=9.73 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=22 ttl=119 time=10.7 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=23 ttl=119 time=6.64 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=24 ttl=119 time=16.1 ms
+^C
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=10.4 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=20.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=25.0 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=11.2 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.94 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=16.6 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=7 ttl=119 time=8.90 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=8 ttl=119 time=6.58 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=9 ttl=119 time=8.24 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=10 ttl=119 time=7.67 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=11 ttl=119 time=21.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=12 ttl=119 time=5.99 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=13 ttl=119 time=9.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=14 ttl=119 time=118 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=15 ttl=119 time=9.38 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=16 ttl=119 time=11.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=17 ttl=119 time=8.11 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=18 ttl=119 time=7.32 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=19 ttl=119 time=9.35 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=20 ttl=119 time=8.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=21 ttl=119 time=9.73 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=22 ttl=119 time=10.7 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=23 ttl=119 time=6.64 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=24 ttl=119 time=16.1 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com >> ping.txt 2>&1 | tee ping.txt
+^C
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ not working
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
