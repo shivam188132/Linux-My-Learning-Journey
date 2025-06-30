@@ -378,3 +378,22 @@ shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls | wc -l
+3
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls | cat
+file1.txt
+file2.txt
+file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt
+0	file1.txt
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt > /dev/null
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt > /dev/null 2>&1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt 2>&1 > /dev/null
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt 2>&1 > /dev/null | wc -l 
+1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
