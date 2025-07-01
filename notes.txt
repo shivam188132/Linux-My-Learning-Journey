@@ -495,5 +495,425 @@ shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com 
 ^C
 shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ not working
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+correction here 
 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com >> ming.txt 2>&1 | tee ping.txt
+^Cshivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ la
+file1.txt  file2.txt  file3.txt  hello.txt  ming.txt  ping.txt  tee
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc -l ming.txt
+11 ming.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ming.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=6.07 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=8.23 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=33.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=12.5 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.61 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=27.0 ms
 
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5006ms
+rtt min/avg/max/mdev = 6.067/15.583/33.080/10.575 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+practising pipe with sort and unique commands 
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt
+F_Name,L_name,Score
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 0
+sort: field number is zero: invalid field specification ‘0’
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 1 practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 0  practise.txt
+sort: field number is zero: invalid field specification ‘0’
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 2  practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -t ',' -k2 practise.txt
+Grace,Kaur,56
+Charlie,Kaur,62
+Leo,Kaur,62
+Ray,Kaur,83
+Eve,Khan,50
+Kara,Khan,53
+Hank,Khan,68
+F_Name,L_name,Score
+Alice,Potter,56
+Zoe,Potter,67
+Tom,Potter,93
+Quinn,Singh,51
+Uma,Singh,55
+Bob,Singh,58
+Wendy,Singh,61
+Frank,Singh,67
+Nina,Singh,92
+Oscar,Singh,92
+Diana,Singh,97
+Pam,Smith,84
+Ivy,Smith,87
+Mona,Smith,95
+Xavier,Smith,95
+Jack,Smith,97
+Sara,Smith,98
+Vik,Smith,98
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -t ',' -k3 practise.txt
+Eve,Khan,50
+Quinn,Singh,51
+Kara,Khan,53
+Uma,Singh,55
+Alice,Potter,56
+Grace,Kaur,56
+Bob,Singh,58
+Wendy,Singh,61
+Charlie,Kaur,62
+Leo,Kaur,62
+Frank,Singh,67
+Zoe,Potter,67
+Hank,Khan,68
+Ray,Kaur,83
+Pam,Smith,84
+Ivy,Smith,87
+Nina,Singh,92
+Oscar,Singh,92
+Tom,Potter,93
+Mona,Smith,95
+Xavier,Smith,95
+Diana,Singh,97
+Jack,Smith,97
+Sara,Smith,98
+Vik,Smith,98
+F_Name,L_name,Score
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt 
+Alice Potter
+Alice Potter
+Alice Potter
+Alice Singh
+Alice Singh
+Alice Singh
+Alice Smith
+Alice Smith
+Alice Smith
+Bob Potter
+Bob Potter
+Bob Potter
+Bob Potter
+Bob Singh
+Bob Singh
+Bob Smith
+Bob Smith
+Bob Smith
+Bob Smith
+Charlie Potter
+Charlie Potter
+Charlie Smith
+Charlie Smith
+Charlie Smith
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Singh
+Bob Potter
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt | wc -l 
+26
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt | wc -l
+26
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat pracise.txt
+cat: pracise.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat
+cat     catman  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat p
+ping.txt                 practice_data.txt        practise.txt
+practice_data.csv        practise_duplicates.txt  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat p
+ping.txt                 practice_data.txt        practise.txt
+practice_data.csv        practise_duplicates.txt  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt
+F_Name,L_name,Score
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise
+practise_duplicates.txt  practise.txt             
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Singh
+Bob Potter
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt | sort -r
+Zoe,Potter,67
+Xavier,Smith,95
+Wendy,Singh,61
+Vik,Smith,98
+Uma,Singh,55
+Tom,Potter,93
+Sara,Smith,98
+Ray,Kaur,83
+Quinn,Singh,51
+Pam,Smith,84
+Oscar,Singh,92
+Nina,Singh,92
+Mona,Smith,95
+Leo,Kaur,62
+Kara,Khan,53
+Jack,Smith,97
+Ivy,Smith,87
+Hank,Khan,68
+Grace,Kaur,56
+Frank,Singh,67
+F_Name,L_name,Score
+Eve,Khan,50
+Diana,Singh,97
+Charlie,Kaur,62
+Bob,Singh,58
+Alice,Potter,56
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt | uniq
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ uniq practise_duplicates.txt 
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -u practise_duplicates.txt
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt | sort | uniq -d 
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
