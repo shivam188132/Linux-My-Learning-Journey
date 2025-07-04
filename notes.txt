@@ -1,0 +1,919 @@
+xdg-open "file_path"
+
+globbing 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mkdir demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ touch IMG_6677.MOV IMG_6677.SRT 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ ls
+demo  demo2  IMG_6677.MOV  IMG_6677.SRT  re1.pdf  re2.jpg  re3.pptx
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mv IMG_[1-9] ./demo2
+mv: cannot stat 'IMG_[1-9]': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ mv IMG_6677.*  ./demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ ls demo2
+IMG_6677.MOV  IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ echo IMG?6677.*
+IMG?6677.*
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo$ cd demo2
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_6677.MOV  IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG?6677.*
+IMG_6677.MOV IMG_6677.SRT
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ touch IMG_234.jpg IMG_6677.jpg IMG_6678.JPG 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ LS
+LS: command not found
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_6677.jpg  IMG_6677.MOV  IMG_6677.SRT  IMG_6678.JPG
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ touch IMG_34.jpg IMG_5678.jpg IMG_6679.jpg 
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_5678.jpg  IMG_6677.MOV  IMG_6678.JPG
+IMG_34.jpg   IMG_6677.jpg  IMG_6677.SRT  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ xdg-open ./
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ ls
+IMG_234.jpg  IMG_34.jpg  IMG_5678.jpg  IMG_6677.jpg  IMG_6677.MOV  IMG_6677.SRT  IMG_6678.JPG  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_[0-9][0-9][0-9].*
+IMG_234.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_*
+IMG_234.jpg IMG_34.jpg IMG_5678.jpg IMG_6677.jpg IMG_6677.MOV IMG_6677.SRT IMG_6678.JPG IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ echo IMG_2*
+IMG_234.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo/moving_repo/demo2$ cd ~
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop           Music             Pictures    test-repo
+ Documents         my_venv           Public      Videos
+ Downloads         nkt_moving_repo   snap       'virtubox asst'
+ mkt_moving_repo   notes.txt         Templates   vscode
+shivam@shivam-Bravo-15-B5DD:~$ rmdir nkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop     mkt_moving_repo   notes.txt   snap        Videos
+ Documents   Music             Pictures    Templates  'virtubox asst'
+ Downloads   my_venv           Public      test-repo   vscode
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo
+moving_repo
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop     mkt_moving_repo   notes.txt   snap        Videos
+ Documents   Music             Pictures    Templates  'virtubox asst'
+ Downloads   my_venv           Public      test-repo   vscode
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo/moving_repo
+demo  demo2  re1.pdf  re2.jpg  re3.pptx
+shivam@shivam-Bravo-15-B5DD:~$ ls mkt_moving_repo/moving_repo/demo2
+IMG_234.jpg  IMG_5678.jpg  IMG_6677.MOV  IMG_6678.JPG
+IMG_34.jpg   IMG_6677.jpg  IMG_6677.SRT  IMG_6679.jpg
+shivam@shivam-Bravo-15-B5DD:~$ 
+
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mkdir 'testing globbing'
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ lssh
+ moving_repo  'testing globbing'
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ echo **/*.jpg
+moving_repo/demo2/IMG_234.jpg moving_repo/demo2/IMG_34.jpg moving_repo/demo2/IMG_5678.jpg moving_repo/demo2/IMG_6677.jpg moving_repo/demo2/IMG_6679.jpg moving_repo/re2.jpg
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mv **/*.jpg  ./testing_globbing
+mv: target './testing_globbing': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ mv **/*.jpg  ./testing\ globbing/
+shivam@shivam-Bravo-15-B5DD:~/mkt_moving_repo$ ls
+ moving_repo  'testing globbing'
+
+--------------------------------------------------------SECTION 6 (EX. 60) -------------------------------------------------------------------
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ sudo -s globstar
+[sudo] password for shivam: 
+/bin/bash: line 1: globstar: command not found
+shivam@shivam-Bravo-15-B5DD:~/linux$ shopt -s globstar
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.pdf
+CompanyShare/Purchasing/01 - January/Invoice.pdf CompanyShare/Purchasing/02 - February/important-invoice.pdf CompanyShare/Sales/02 - February/Balance-Sheet-February.pdf CompanyShare/Sales/03 - March/Additional-Invoice-March.pdf mkt_moving_repo/moving_repo/re1.pdf
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.xlsx
+CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo */**/*.xlsx */**/*.xlsx
+CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx CompanyShare/Purchasing/02 - February/additional-table.xlsx CompanyShare/Purchasing/02 - February/important-business-figures.xlsx CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx CompanyShare/Sales/01 - January/Sales-January.xlsx CompanyShare/Sales/03 - March/Sales-March.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd /companyShare
+bash: cd: /companyShare: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd CompanyShare
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ mkdir Export
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ cd ..
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd ComapnyShare/Export
+bash: cd: ComapnyShare/Export: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd CompanyShare
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ ls
+Export  Purchasing  Sales
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare$ cd Export
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ ls
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ echo */**/*.xlsx */**/*.xlsx .
+*/**/*.xlsx */**/*.xlsx .
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ mv  */**/*.xlsx */**/*.xlsx .
+mv: cannot stat '*/**/*.xlsx': No such file or directory
+mv: cannot stat '*/**/*.xlsx': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ cd ~
+shivam@shivam-Bravo-15-B5DD:~$ ls
+ Desktop   Documents   Downloads   linux   Music   my_venv   notes.txt   Pictures   Public   resume   snap   Templates   test-repo   Videos  'virtubox asst'   vscode
+shivam@shivam-Bravo-15-B5DD:~$ cd linux
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv  */**/*.xlsx */**/*.xlsx ~/linux/CompanyShare/Export
+mv: cannot stat 'CompanyShare/Purchasing/01 - January/Balance Sheet.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/02 - February/additional-table.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/02 - February/important-business-figures.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Purchasing/03 - March/numbers-from-march.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Sales/01 - January/Sales-January.xlsx': No such file or directory
+mv: cannot stat 'CompanyShare/Sales/03 - March/Sales-March.xlsx': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv  */**/*.pdf  ~/linux/CompanyShare/Export
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd Export
+bash: cd: Export: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+CompanyShare  __MACOSX  mkt_moving_repo
+shivam@shivam-Bravo-15-B5DD:~/linux$ cd ./CompanyShare/Export/
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ ls
+ Additional-Invoice-March.pdf   Balance-Sheet-February.pdf   important-business-figures.xlsx   Invoice.pdf               re1.pdf              Sales-March.xlsx
+ additional-table.xlsx         'Balance Sheet.xlsx'          important-invoice.pdf             numbers-from-march.xlsx   Sales-January.xlsx
+shivam@shivam-Bravo-15-B5DD:~/linux/CompanyShare/Export$ 
+
+---------------------------------------------------SECTION 7----------------------------------------------------------------------------------------------------
+
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n romeo.txt
+head: invalid number of lines: ‘romeo.txt’
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n 5 romeo.txt
+The Project Gutenberg eBook of Romeo and Juliet, by William Shakespeare
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+shivam@shivam-Bravo-15-B5DD:~/linux$ tail -n 5 romeo.txt
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ head romeo.txt
+The Project Gutenberg eBook of Romeo and Juliet, by William Shakespeare
+
+This eBook is for the use of anyone anywhere in the United States and
+most other parts of the world at no cost and with almost no restrictions
+whatsoever. You may copy it, give it away or re-use it under the terms
+of the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org. If you are not located in the United States, you
+will have to check the laws of the country where you are located before
+using this eBook.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ tail romeo.txt
+edition.
+
+Most people start at our website which has the main PG search
+facility: www.gutenberg.org.
+
+This website includes information about Project Gutenberg™,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+shivam@shivam-Bravo-15-B5DD:~/linux$ less romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc file.txt
+wc: file.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc romeo.txt
+  5642  29003 169353 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -l romeo.txt
+5642 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -w romeo.txt
+29003 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -c romeo.txt
+169353 romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$
+---------------------------------------------------------------------------nano/ pico command for text editing basics ------------------------- 
+CompanyShare  __MACOSX  mkt_moving_repo  notes.txt  romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ nano notes.txt
+------------------------------------------------------------------------------------EXERCISE WORK---------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls ./assingnments/
+log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ mv assingnments ./assignment
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls
+ assignment     __MACOSX          notes.txt       romeo.txt
+ CompanyShare   mkt_moving_repo  'os(mod3).txt'
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls  ./assignment
+log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -h ./assignment/log_file.txt 
+wc: invalid option -- 'h'
+Try 'wc --help' for more information.
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc -c ./assignment/log_file.txt 
+2632429 ./assignment/log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ wc --help
+Usage: wc [OPTION]... [FILE]...
+  or:  wc [OPTION]... --files0-from=F
+Print newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified.  A word is a non-zero-length sequence of
+printable characters delimited by white space.
+
+With no FILE, or when FILE is -, read standard input.
+
+The options below may be used to select which counts are printed, always in
+the following order: newline, word, character, byte, maximum line length.
+  -c, --bytes            print the byte counts
+  -m, --chars            print the character counts
+  -l, --lines            print the newline counts
+      --files0-from=F    read input from the files specified by
+                           NUL-terminated names in file F;
+                           If F is - then read names from standard input
+  -L, --max-line-length  print the maximum display width
+  -w, --words            print the word counts
+      --total=WHEN       when to print a line with total counts;
+                           WHEN can be: auto, always, only, never
+      --help        display this help and exit
+      --version     output version information and exit
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/wc>
+or available locally via: info '(coreutils) wc invocation'
+shivam@shivam-Bravo-15-B5DD:~/linux$ du  -c ./assignment/log_file.txt 
+2572	./assignment/log_file.txt
+2572	total
+shivam@shivam-Bravo-15-B5DD:~/linux$ du  -h  ./assignment/log_file.txt 
+2.6M	./assignment/log_file.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ less ./a
+shivam@shivam-Bravo-15-B5DD:~/linux$ head -n 1  ./assignment/log_file.txt 
+243.100.182.64 - - 11/Jul/2049:17:31:52 +0000 "GET /register.html HTTP/1.1" 200 1525 "https://www.invisible-ink-inc.com/spy-lab.html" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
+
+------------------------------------------------SECTION 8 --------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing'
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:25 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+-rw-rw-r-- 1 shivam shivam 0 Jun 22 13:25 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob" > output.txt
+> ^C
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'Bash is Amazing' > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+shivam@shivam-Bravo-15-B5DD:~/linux$ ls -lh output.txt >> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ echo 'I am Noob' >> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo.txt
+168K	romeo.txt
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo1.txt
+du: cannot access 'romeo1.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ du -h romeo1.txt >> ouptput.txt
+du: cannot access 'romeo1.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux$ cat output.txt
+Bash is Amazing
+-rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
+I am Noob
+shivam@shivam-Bravo-15-B5DD:~/linux$ 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Redirection- Manage Data Streams 
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls 
+error.txt  IMG_01.png  log_file.txt  output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ touch IMG_02.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png 1> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png 1> output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png 2> error.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt ; cat output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt ; cat output.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt ; cat error.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ nano output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls output.txt
+output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ xdg-open "output.txt"
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat error.txt
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_01.png 1> output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat output.txt
+192K	IMG_01.png
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ 
+--------------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01
+du: cannot access 'IMG_03.png': No such file or directory
+du: cannot access 'IMG_01': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2> dev/null >> output.txt
+bash: dev/null: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ du -h IMG_03.png IMG_01 2>/dev/null >> output.txt
+--------------------------------------------------Redirectiong stdout to stderr-------------------------------------------------------------------
+| Command                        | stdout goes to | stderr goes to | Notes                   |
+| ------------------------------ | -------------- | -------------- | ----------------------- |
+| `command > out.txt 2>&1`       | out.txt        | out.txt        | ✅ both in one file      |
+| `command 2>&1 > out.txt`       | out.txt        | terminal       | ❌ not combined          |
+| `command &> out.txt`           | out.txt        | out.txt        | ✅ shorthand (Bash only) |
+| `command > out.txt`            | out.txt        | terminal       | Only stdout in file     |
+| `command 2> err.txt`           | terminal       | err.txt        | Only stderr in file     |
+| `command > out.txt 2> err.txt` | out.txt        | err.txt        | Separate files for each |
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l
+This is bash!
+another line ..
+2
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat
+Hello from Bash!
+Hello from Bash!
+...........
+...........
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt  testing.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat testing.txt
+192K	IMG_01.png
+du: cannot access 'IMG_03.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l < out.txt
+bash: out.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ wc -l < output.txt
+2
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat - < output.txt
+192K	IMG_01.png
+du: cannot access 'IMG_O4.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat - < output.txt > another.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ cat another.txt
+192K	IMG_01.png
+du: cannot access 'IMG_O4.png': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ ls
+another.txt  error.txt  IMG_01.png  IMG_02.png  log_file.txt  output.txt  testing.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment$ 
+------------------------------------------------------------SECTION 9 -------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls > output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ cat output.txt
+file1.txt
+file2.txt
+file3.txt
+output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ wc -l output.txt
+4 output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ rm output.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ 
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 10$ 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls
+file1.txt  file2.txt  file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls | wc -l
+3
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls | cat
+file1.txt
+file2.txt
+file3.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt
+0	file1.txt
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt > /dev/null
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt > /dev/null 2>&1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt 2>&1 > /dev/null
+du: cannot access 'file-not-exist.txt': No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ du -h file1.txt file-not-exist.txt 2>&1 > /dev/null | wc -l 
+1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ echo 'Hello World' | tee hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls 
+file1.txt  file2.txt  file3.txt  hello.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ echo 'Hello World' | tee hello.txt | wc -c
+12
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat hello.txt
+Hello World
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc hello.txt
+ 1  2 12 hello.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com
+PING google.com (142.250.77.238) 56(84) bytes of data.
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=1 ttl=119 time=7.45 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=2 ttl=119 time=7.23 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=3 ttl=119 time=9.38 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=4 ttl=119 time=11.4 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=5 ttl=119 time=7.43 ms
+64 bytes from del11s09-in-f14.1e100.net (142.250.77.238): icmp_seq=6 ttl=119 time=49.4 ms
+^C
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5007ms
+rtt min/avg/max/mdev = 7.229/15.376/49.417/15.292 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com 2>&1 
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com 2>&1 > ping.txt
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ls
+file1.txt  file2.txt  file3.txt  hello.txt  ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc -c ping.txt
+0 ping.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping abc@xyz.com > ping.txt 2>&1
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+ping: abc@xyz.com: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com 2>&1 > tee ping.txt
+ping: ping.txt: Name or service not known
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com 2>&1 | tee ping.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=10.4 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=20.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=25.0 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=11.2 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.94 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=16.6 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=7 ttl=119 time=8.90 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=8 ttl=119 time=6.58 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=9 ttl=119 time=8.24 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=10 ttl=119 time=7.67 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=11 ttl=119 time=21.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=12 ttl=119 time=5.99 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=13 ttl=119 time=9.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=14 ttl=119 time=118 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=15 ttl=119 time=9.38 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=16 ttl=119 time=11.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=17 ttl=119 time=8.11 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=18 ttl=119 time=7.32 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=19 ttl=119 time=9.35 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=20 ttl=119 time=8.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=21 ttl=119 time=9.73 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=22 ttl=119 time=10.7 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=23 ttl=119 time=6.64 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=24 ttl=119 time=16.1 ms
+^C
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ping.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=10.4 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=20.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=25.0 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=11.2 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.94 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=16.6 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=7 ttl=119 time=8.90 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=8 ttl=119 time=6.58 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=9 ttl=119 time=8.24 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=10 ttl=119 time=7.67 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=11 ttl=119 time=21.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=12 ttl=119 time=5.99 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=13 ttl=119 time=9.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=14 ttl=119 time=118 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=15 ttl=119 time=9.38 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=16 ttl=119 time=11.3 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=17 ttl=119 time=8.11 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=18 ttl=119 time=7.32 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=19 ttl=119 time=9.35 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=20 ttl=119 time=8.81 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=21 ttl=119 time=9.73 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=22 ttl=119 time=10.7 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=23 ttl=119 time=6.64 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=24 ttl=119 time=16.1 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com >> ping.txt 2>&1 | tee ping.txt
+^C
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ not working
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+correction here 
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ ping google.com >> ming.txt 2>&1 | tee ping.txt
+^Cshivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ la
+file1.txt  file2.txt  file3.txt  hello.txt  ming.txt  ping.txt  tee
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ wc -l ming.txt
+11 ming.txt
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat ming.txt
+PING google.com (142.250.194.78) 56(84) bytes of data.
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=1 ttl=119 time=6.07 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=2 ttl=119 time=8.23 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=3 ttl=119 time=33.1 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=4 ttl=119 time=12.5 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=5 ttl=119 time=6.61 ms
+64 bytes from del12s03-in-f14.1e100.net (142.250.194.78): icmp_seq=6 ttl=119 time=27.0 ms
+
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5006ms
+rtt min/avg/max/mdev = 6.067/15.583/33.080/10.575 ms
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+practising pipe with sort and unique commands 
+
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt
+F_Name,L_name,Score
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 0
+sort: field number is zero: invalid field specification ‘0’
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 1 practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 0  practise.txt
+sort: field number is zero: invalid field specification ‘0’
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -k 2  practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -t ',' -k2 practise.txt
+Grace,Kaur,56
+Charlie,Kaur,62
+Leo,Kaur,62
+Ray,Kaur,83
+Eve,Khan,50
+Kara,Khan,53
+Hank,Khan,68
+F_Name,L_name,Score
+Alice,Potter,56
+Zoe,Potter,67
+Tom,Potter,93
+Quinn,Singh,51
+Uma,Singh,55
+Bob,Singh,58
+Wendy,Singh,61
+Frank,Singh,67
+Nina,Singh,92
+Oscar,Singh,92
+Diana,Singh,97
+Pam,Smith,84
+Ivy,Smith,87
+Mona,Smith,95
+Xavier,Smith,95
+Jack,Smith,97
+Sara,Smith,98
+Vik,Smith,98
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise.txt
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+F_Name,L_name,Score
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -t ',' -k3 practise.txt
+Eve,Khan,50
+Quinn,Singh,51
+Kara,Khan,53
+Uma,Singh,55
+Alice,Potter,56
+Grace,Kaur,56
+Bob,Singh,58
+Wendy,Singh,61
+Charlie,Kaur,62
+Leo,Kaur,62
+Frank,Singh,67
+Zoe,Potter,67
+Hank,Khan,68
+Ray,Kaur,83
+Pam,Smith,84
+Ivy,Smith,87
+Nina,Singh,92
+Oscar,Singh,92
+Tom,Potter,93
+Mona,Smith,95
+Xavier,Smith,95
+Diana,Singh,97
+Jack,Smith,97
+Sara,Smith,98
+Vik,Smith,98
+F_Name,L_name,Score
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt 
+Alice Potter
+Alice Potter
+Alice Potter
+Alice Singh
+Alice Singh
+Alice Singh
+Alice Smith
+Alice Smith
+Alice Smith
+Bob Potter
+Bob Potter
+Bob Potter
+Bob Potter
+Bob Singh
+Bob Singh
+Bob Smith
+Bob Smith
+Bob Smith
+Bob Smith
+Charlie Potter
+Charlie Potter
+Charlie Smith
+Charlie Smith
+Charlie Smith
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Singh
+Bob Potter
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt | wc -l 
+26
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt | wc -l
+26
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat pracise.txt
+cat: pracise.txt: No such file or directory
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat
+cat     catman  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat p
+ping.txt                 practice_data.txt        practise.txt
+practice_data.csv        practise_duplicates.txt  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat p
+ping.txt                 practice_data.txt        practise.txt
+practice_data.csv        practise_duplicates.txt  
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt
+F_Name,L_name,Score
+Alice,Potter,56
+Bob,Singh,58
+Charlie,Kaur,62
+Diana,Singh,97
+Eve,Khan,50
+Frank,Singh,67
+Grace,Kaur,56
+Hank,Khan,68
+Ivy,Smith,87
+Jack,Smith,97
+Kara,Khan,53
+Leo,Kaur,62
+Mona,Smith,95
+Nina,Singh,92
+Oscar,Singh,92
+Pam,Smith,84
+Quinn,Singh,51
+Ray,Kaur,83
+Sara,Smith,98
+Tom,Potter,93
+Uma,Singh,55
+Vik,Smith,98
+Wendy,Singh,61
+Xavier,Smith,95
+Zoe,Potter,67
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise
+practise_duplicates.txt  practise.txt             
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Singh
+Bob Potter
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise.txt | sort -r
+Zoe,Potter,67
+Xavier,Smith,95
+Wendy,Singh,61
+Vik,Smith,98
+Uma,Singh,55
+Tom,Potter,93
+Sara,Smith,98
+Ray,Kaur,83
+Quinn,Singh,51
+Pam,Smith,84
+Oscar,Singh,92
+Nina,Singh,92
+Mona,Smith,95
+Leo,Kaur,62
+Kara,Khan,53
+Jack,Smith,97
+Ivy,Smith,87
+Hank,Khan,68
+Grace,Kaur,56
+Frank,Singh,67
+F_Name,L_name,Score
+Eve,Khan,50
+Diana,Singh,97
+Charlie,Kaur,62
+Bob,Singh,58
+Alice,Potter,56
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort practise_duplicates.txt | uniq
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ uniq practise_duplicates.txt 
+F_Name,L_name
+Bob Smith
+Charlie Smith
+Bob Smith
+Bob Potter
+Charlie Smith
+Alice Singh
+Alice Potter
+Bob Potter
+Bob Smith
+Charlie Potter
+Bob Smith
+Alice Potter
+Alice Singh
+Bob Singh
+Bob Potter
+Charlie Potter
+Charlie Smith
+Alice Smith
+Alice Potter
+Alice Singh
+Alice Smith
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ sort -u practise_duplicates.txt
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+F_Name,L_name
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ cat practise_duplicates.txt | sort | uniq -d 
+Alice Potter
+Alice Singh
+Alice Smith
+Bob Potter
+Bob Singh
+Bob Smith
+Charlie Potter
+Charlie Smith
+shivam@shivam-Bravo-15-B5DD:~/linux/assignment/section 9 pipes$ 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
