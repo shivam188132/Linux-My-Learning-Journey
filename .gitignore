@@ -1,1 +1,5 @@
-real_world/
+# existing ignored files...
+
+mkt_moving_repo/
+__MACOSX/
+
