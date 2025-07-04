@@ -1,1 +1,4 @@
-./mkt_moving_repo
+
+# Ignore nested repo
+mkt_moving_repo/
+
