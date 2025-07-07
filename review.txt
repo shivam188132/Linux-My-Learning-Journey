@@ -1,0 +1,9 @@
+Install Bluestacks 5 -> VirtuKiosk and Review Up to s10 Kiosk Demos of your choice. 
+
+- Write the business objective for each selected demo before review.
+- Write app features/sections that is required to fulfill the above objective.
+- List all the features of Demo selected post-review.
+- Your recommendation for each selected demos to improve both functionality and business wise.
+- ROI Analysis for each Demo
+- Other Solutions that we can propose to the business listed in the demo.
+- Write all the events we can capture for analytics purpose
