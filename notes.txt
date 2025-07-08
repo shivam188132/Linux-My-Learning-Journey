@@ -1124,3 +1124,81 @@ Bashisamazing
                                                                        
 ┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
 └─$ 
+-------------------------------------------------------------------------CUT COMMAND -----------------------------------------------------------------------------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Linux/assignment/section\ 9\ pipes           
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime                                      
+ 16:00:33 up  1:27,  1 user,  load average: 0.83, 0.47, 0.54
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -b 1-10
+ 16:01:06 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -b 1-11
+ 16:01:51 u
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -b 3-11
+6:01:58 u
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -c 1-10
+ 16:03:01 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'h@'                         
+h@
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'h@h@' | cut -c 1-2
+h@
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'h@h@' | cut -b 1-2
+h@
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'h@h@' | cut -b 2  
+@
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'iamshivam' | cut -b 2-
+amshivam
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'iamshivam' | cut -b 2 
+a
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 1
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime                  
+ 16:08:25 up  1:35,  1 user,  load average: 1.04, 0.98, 0.76
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 1
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 2
+16:09:16
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 3
+up
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 4
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ uptime | cut -d ' ' -f 5
+1:38,
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ 
