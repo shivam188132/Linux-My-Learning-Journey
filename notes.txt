@@ -1202,3 +1202,28 @@ up
                                                                                 
 ┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
 └─$ 
+-----------------------------------------------------------------------------------------------------SED COMMAND -----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'hello world' | sed 's/world/bash/g'
+hello bash
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ echo 'hello world world2 world3' | sed 's/world/bash/g'
+hello bash bash2 bash3
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/section 9 pipes]
+└─$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
