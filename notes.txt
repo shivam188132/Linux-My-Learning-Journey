@@ -1576,7 +1576,560 @@ shivam
 ┌──(shivam1㉿Venom)-[~/Linux]
 └─$ 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+THE FILE HIERARCHY STANDARD 
 
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /usr/local/sbin                      
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /usr/sbin      
+a2disconf               httxt2dbm                    ql2tpd
+a2dismod                hwloc-dump-hwdata            racf2john
+a2dissite               i2cdetect                    rar2john
+a2enconf                i2cdump                      rarp
+a2enmod                 i2cget                       raw2dyna
+a2ensite                i2cset                       readprofile
+a2query                 i2c-stub-from-dump           realm
+aa-load                 i2ctransfer                  reboot
+aa-remove-unknown       iconvconfig                  recv_image
+aa-status               ifconfig                     redsocks
+aa-teardown             ifdown                       reged
+accessdb                ifdtool                      remove-default-ispell
+addgnupghome            ifittool                     remove-default-wordlist
+addgroup                ifpps                        remove-shell
+add-shell               ifquery                      request-key
+adduser                 ifup                         resize2fs
+agetty                  ifwitool                     responder
+airbase-ng              init                         responder-DHCP_Auto
+aireplay-ng             insmod                       rfddump
+airmon-ng               install-docs                 rfdformat
+airodump-ng             installkernel                rfkill
+airodump-ng-oui-update  install-sgmlcatalog          rmmod
+airserv-ng              integritysetup               rmodtool
+airtun-ng               intelmetool                  rmt
+airventriloquist-ng     inteltool                    rmt-tar
+apache2                 intelvbttool                 route
+apache2ctl              in.tftpd                     rpcbind
+apachectl               invoke-rc.d                  rpcctl
+apparmor_parser         iodine                       rpcdebug
+apparmor_status         iodine-client-start          rpc.gssd
+applygnupgdefaults      iodined                      rpc.idmapd
+arp                     ip                           rpcinfo
+arpd                    ip6tables                    rpc.statd
+arp-fingerprint         ip6tables-apply              rpc.svcgssd
+arping                  ip6tables-legacy             rtacct
+arp-scan                ip6tables-legacy-restore     rtcwake
+arpspoof                ip6tables-legacy-save        rtkitctl
+arptables               ip6tables-nft                rtmon
+arptables-nft           ip6tables-nft-restore        runlevel
+arptables-nft-restore   ip6tables-nft-save           runuser
+arptables-nft-save      ip6tables-restore            samba
+arptables-restore       ip6tables-restore-translate  samba_dnsupdate
+arptables-save          ip6tables-save               samba-gpupdate
+arptables-translate     ip6tables-translate          samba_kcc
+aspell-autobuildhash    ipmaddr                      samba_spnupdate
+astraceroute            ipp-usb                      samba_upgradedns
+atftpd                  ipsec                        sampasswd
+avahi-daemon            iptables                     samunlock
+badblocks               iptables-apply               samusrgrp
+base64conv              iptables-legacy              saned
+besside-ng              iptables-legacy-restore      scrounge-ntfs
+biosdecode              iptables-legacy-save         select-default-ispell
+bitlocker2john          iptables-nft                 select-default-wordlist
+blkdeactivate           iptables-nft-restore         sensors-detect
+blkdiscard              iptables-nft-save            serve_image
+blkid                   iptables-restore             service
+blkmapd                 iptables-restore-translate   setcap
+blkzone                 iptables-save                setvesablank
+blockdev                iptables-translate           sfdisk
+bluetoothd              iptunnel                     sgdisk
+bpfc                    isadump                      shadowconfig
+bridge                  isaset                       showmount
+bucts                   isosize                      shutdown
+calc_stat               ispell-autobuildhash         SIPdump
+capsh                   iucode-tool                  slattach
+cbfs-compression-tool   iucode_tool                  smartctl
+cbfstool                iw                           smartd
+cbmem                   iwconfig                     smbd
+cfdisk                  iwevent                      sm-notify
+cgdisk                  iwgetid                      snmpd
+chat                    iwlist                       split-logfile
+chcpu                   iwpriv                       sshd
+check_forensic          iwspy                        sshmitm
+chgpasswd               jffs2dump                    sshow
+chmem                   jffs2reader                  sslh
+chntpw                  john                         sslh-ev
+chpasswd                kbdrate                      sslh-select
+chroot                  keepass2john                 start-statd
+cifs.idmap              key.dns_resolver             start-stop-daemon
+cifs.upcall             killall5                     sudo_logsrvd
+cprepair                kl2tpd                       sudo_sendlog
+cracklib-check          kpppoed                      sulogin
+cracklib-format         ldattach                     sumtool
+cracklib-packer         ldconfig                     superiotool
+cracklib-unpacker       libgvc6-config-update        swaplabel
+create-cracklib-dict    lightdm                      swapoff
+cron                    lightdm-gtk-greeter          swapon
+cryptdisks_start        locale-gen                   switch_root
+cryptdisks_stop         logrotate                    sysctl
+cryptsetup              logsave                      system-tools-backends
+curvetun                losetup                      tarcat
+dcb                     lsmod                        tc
+debian-update-rc.d      lsmtd                        tcpick
+debugfs                 luksformat                   tcpkill
+delgroup                macof                        tcpnice
+deluser                 mailer                       tcptraceroute
+depmod                  mailsnarf                    tcptraceroute.db
+devlink                 make-ssl-cert                telinit
+dhcpcd                  mariadbd                     tgtsnarf
+dmg2john                mausezahn                    tipc
+dmidecode               mii-tool                     tkiptun-ng
+dmsetup                 miredo                       traceroute
+dmstats                 miredo-checkconf             trafgen
+dnsmasq                 mkdosfs                      tune2fs
+dnsspoof                mke2fs                       tune.exfat
+docfdisk                mkfs                         uaf2john
+doc_loadbios            mkfs.exfat                   ubiattach
+dosfsck                 mkfs.ext2                    ubiblock
+dosfslabel              mkfs.ext3                    ubicrc32
+dpkg-preconfigure       mkfs.ext4                    ubidetach
+dpkg-reconfigure        mkfs.fat                     ubiformat
+dsniff                  mkfs.jffs2                   ubihealthd
+dumpe2fs                mkfs.msdos                   ubimkvol
+dump.exfat              mkfs.ntfs                    ubinfo
+e2freefrag              mkfs.ubifs                   ubinize
+e2fsck                  mkfs.vfat                    ubirename
+e2image                 mkhomedir_helper             ubirmvol
+e2label                 mkinitramfs                  ubirsvol
+e2mmpstatus             mklost+found                 ubiscan
+e2scrub                 mkntfs                       ubiupdatevol
+e2scrub_all             mkswap                       umount.nfs
+e2undo                  mkvcalcproba                 umount.nfs4
+e4crypt                 ModemManager                 umount.udisks2
+e4defrag                modinfo                      unafs
+eapmd5tojohn            modprobe                     undrop
+easside-ng              mosquitto                    unique
+ebtables                mount.cifs                   unix_chkpwd
+ebtables-nft            mount.fuse                   unix_update
+ebtables-nft-restore    mount.fuse3                  unshadow
+ebtables-nft-save       mount.lowntfs-3g             update-ca-certificates
+ebtables-restore        mount.nfs                    update-catalog
+ebtables-save           mount.nfs4                   update-command-not-found
+ebtables-translate      mount.ntfs                   update-cracklib
+ectool                  mount.ntfs-3g                updatedb.plocate
+elogtool                mount.smb3                   update-default-aspell
+ethtool                 mountstats                   update-default-ispell
+eventlogadm             mount.ubifs                  update-default-wordlist
+exfat2img               msgsnarf                     update-dictcommon-aspell
+exfatlabel              msrtool                      update-dictcommon-hunspell
+faillock                mtd_debug                    update-fmtutil
+fatlabel                mtdinfo                      update-fonts-alias
+fdisk                   mtdpart                      update-fonts-dir
+fectest                 mysqld                       update-fonts-scale
+filefrag                nameif                       update-grub
+filesnarf               nanddump                     update-grub2
+findfs                  nandflipbits                 update-gsfontmap
+fixparts                nandtest                     update-icon-caches
+flashcp                 nandwrite                    update-ieee-data
+flash_erase             netdiscover                  update-inetd
+flash_eraseall          netsniff-ng                  update-initramfs
+flash_lock              NetworkManager               update-java-alternatives
+flash_otp_dump          newusers                     update-language
+flash_otp_erase         nfnl_osf                     update-language-dat
+flash_otp_info          nfsconf                      update-language-def
+flash_otp_lock          nfsidmap                     update-language-lua
+flash_otp_write         nfsiostat                    update-locale
+flashrom                nfsstat                      update-passwd
+flash_unlock            nft                          update-pciids
+flowtop                 nftldump                     update-rc.d
+fmaptool                nftl_format                  update-shells
+fsck                    nginx                        update-smart-drivedb
+fsck.exfat              nmbd                         update-texmf
+fsck.ext2               nologin                      update-texmf-config
+fsck.ext3               ntfsclone                    update-tl-stacked-conffile
+fsck.ext4               ntfscp                       update-updmap
+fsck.fat                ntfslabel                    update-xmlcatalog
+fsck.msdos              ntfsresize                   urlsnarf
+fsck.ubifs              ntfsundelete                 usb_modeswitch
+fsck.vfat               nvramtool                    usb_modeswitch_dispatcher
+fsfreeze                on_ac_power                  usbmuxd
+fstab-decode            openconnect                  useradd
+fstrim                  openvas                      userdel
+ftl_check               openvpn                      usermod
+ftl_format              ownership                    validlocale
+gdisk                   pam-auth-update              vconfig
+gdm3                    pam_getenv                   vcstime
+genl                    pam_namespace_helper         vdpa
+genmkvpwd               pam_timestamp_check          veritysetup
+getcap                  paperconfig                  vigr
+get-iab                 parted                       vipw
+get-oui                 partprobe                    visudo
+getpcaps                pcscd                        vncpcap2john
+getty                   pg_updatedicts               vpddecode
+gnome-menus-blacklist   phpdismod                    vpnc
+gparted                 phpenmod                     vpnc-connect
+gpg2john                phpquery                     vpnc-disconnect
+groupadd                pivot_root                   webmitm
+groupdel                plipconfig                   webspy
+groupmod                plocate-build                wesside-ng
+grpck                   plymouthd                    wifite
+grpconv                 plymouth-set-default-theme   winbindd
+grpunconv               pmh7tool                     wipefs
+grub-install            poweroff                     wpa_action
+grub-macbless           pppd                         wpa_cli
+grub-mkconfig           pppdump                      wpapcap2john
+grub-mkdevicemap        pppoe-discovery              wpa_supplicant
+grub-probe              pppstats                     xfce4-kiosk-query
+grub-reboot             pptp                         xfce4-pm-helper
+grub-set-default        pptpsetup                    xfpm-power-backlight-helper
+gvmd                    ptunnel                      xtables-legacy-multi
+halt                    putty2john                   xtables-monitor
+haveged                 pwck                         xtables-nft-multi
+hccap2john              pwconv                       zic
+hdparm                  pwhistory_helper             zip2john
+hping3                  pwunconv                     zramctl
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /home/shivam1/.local/bin
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /home/shivam1/.local/bin
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /usr/sbin               
+a2disconf               httxt2dbm                    ql2tpd
+a2dismod                hwloc-dump-hwdata            racf2john
+a2dissite               i2cdetect                    rar2john
+a2enconf                i2cdump                      rarp
+a2enmod                 i2cget                       raw2dyna
+a2ensite                i2cset                       readprofile
+a2query                 i2c-stub-from-dump           realm
+aa-load                 i2ctransfer                  reboot
+aa-remove-unknown       iconvconfig                  recv_image
+aa-status               ifconfig                     redsocks
+aa-teardown             ifdown                       reged
+accessdb                ifdtool                      remove-default-ispell
+addgnupghome            ifittool                     remove-default-wordlist
+addgroup                ifpps                        remove-shell
+add-shell               ifquery                      request-key
+adduser                 ifup                         resize2fs
+agetty                  ifwitool                     responder
+airbase-ng              init                         responder-DHCP_Auto
+aireplay-ng             insmod                       rfddump
+airmon-ng               install-docs                 rfdformat
+airodump-ng             installkernel                rfkill
+airodump-ng-oui-update  install-sgmlcatalog          rmmod
+airserv-ng              integritysetup               rmodtool
+airtun-ng               intelmetool                  rmt
+airventriloquist-ng     inteltool                    rmt-tar
+apache2                 intelvbttool                 route
+apache2ctl              in.tftpd                     rpcbind
+apachectl               invoke-rc.d                  rpcctl
+apparmor_parser         iodine                       rpcdebug
+apparmor_status         iodine-client-start          rpc.gssd
+applygnupgdefaults      iodined                      rpc.idmapd
+arp                     ip                           rpcinfo
+arpd                    ip6tables                    rpc.statd
+arp-fingerprint         ip6tables-apply              rpc.svcgssd
+arping                  ip6tables-legacy             rtacct
+arp-scan                ip6tables-legacy-restore     rtcwake
+arpspoof                ip6tables-legacy-save        rtkitctl
+arptables               ip6tables-nft                rtmon
+arptables-nft           ip6tables-nft-restore        runlevel
+arptables-nft-restore   ip6tables-nft-save           runuser
+arptables-nft-save      ip6tables-restore            samba
+arptables-restore       ip6tables-restore-translate  samba_dnsupdate
+arptables-save          ip6tables-save               samba-gpupdate
+arptables-translate     ip6tables-translate          samba_kcc
+aspell-autobuildhash    ipmaddr                      samba_spnupdate
+astraceroute            ipp-usb                      samba_upgradedns
+atftpd                  ipsec                        sampasswd
+avahi-daemon            iptables                     samunlock
+badblocks               iptables-apply               samusrgrp
+base64conv              iptables-legacy              saned
+besside-ng              iptables-legacy-restore      scrounge-ntfs
+biosdecode              iptables-legacy-save         select-default-ispell
+bitlocker2john          iptables-nft                 select-default-wordlist
+blkdeactivate           iptables-nft-restore         sensors-detect
+blkdiscard              iptables-nft-save            serve_image
+blkid                   iptables-restore             service
+blkmapd                 iptables-restore-translate   setcap
+blkzone                 iptables-save                setvesablank
+blockdev                iptables-translate           sfdisk
+bluetoothd              iptunnel                     sgdisk
+bpfc                    isadump                      shadowconfig
+bridge                  isaset                       showmount
+bucts                   isosize                      shutdown
+calc_stat               ispell-autobuildhash         SIPdump
+capsh                   iucode-tool                  slattach
+cbfs-compression-tool   iucode_tool                  smartctl
+cbfstool                iw                           smartd
+cbmem                   iwconfig                     smbd
+cfdisk                  iwevent                      sm-notify
+cgdisk                  iwgetid                      snmpd
+chat                    iwlist                       split-logfile
+chcpu                   iwpriv                       sshd
+check_forensic          iwspy                        sshmitm
+chgpasswd               jffs2dump                    sshow
+chmem                   jffs2reader                  sslh
+chntpw                  john                         sslh-ev
+chpasswd                kbdrate                      sslh-select
+chroot                  keepass2john                 start-statd
+cifs.idmap              key.dns_resolver             start-stop-daemon
+cifs.upcall             killall5                     sudo_logsrvd
+cprepair                kl2tpd                       sudo_sendlog
+cracklib-check          kpppoed                      sulogin
+cracklib-format         ldattach                     sumtool
+cracklib-packer         ldconfig                     superiotool
+cracklib-unpacker       libgvc6-config-update        swaplabel
+create-cracklib-dict    lightdm                      swapoff
+cron                    lightdm-gtk-greeter          swapon
+cryptdisks_start        locale-gen                   switch_root
+cryptdisks_stop         logrotate                    sysctl
+cryptsetup              logsave                      system-tools-backends
+curvetun                losetup                      tarcat
+dcb                     lsmod                        tc
+debian-update-rc.d      lsmtd                        tcpick
+debugfs                 luksformat                   tcpkill
+delgroup                macof                        tcpnice
+deluser                 mailer                       tcptraceroute
+depmod                  mailsnarf                    tcptraceroute.db
+devlink                 make-ssl-cert                telinit
+dhcpcd                  mariadbd                     tgtsnarf
+dmg2john                mausezahn                    tipc
+dmidecode               mii-tool                     tkiptun-ng
+dmsetup                 miredo                       traceroute
+dmstats                 miredo-checkconf             trafgen
+dnsmasq                 mkdosfs                      tune2fs
+dnsspoof                mke2fs                       tune.exfat
+docfdisk                mkfs                         uaf2john
+doc_loadbios            mkfs.exfat                   ubiattach
+dosfsck                 mkfs.ext2                    ubiblock
+dosfslabel              mkfs.ext3                    ubicrc32
+dpkg-preconfigure       mkfs.ext4                    ubidetach
+dpkg-reconfigure        mkfs.fat                     ubiformat
+dsniff                  mkfs.jffs2                   ubihealthd
+dumpe2fs                mkfs.msdos                   ubimkvol
+dump.exfat              mkfs.ntfs                    ubinfo
+e2freefrag              mkfs.ubifs                   ubinize
+e2fsck                  mkfs.vfat                    ubirename
+e2image                 mkhomedir_helper             ubirmvol
+e2label                 mkinitramfs                  ubirsvol
+e2mmpstatus             mklost+found                 ubiscan
+e2scrub                 mkntfs                       ubiupdatevol
+e2scrub_all             mkswap                       umount.nfs
+e2undo                  mkvcalcproba                 umount.nfs4
+e4crypt                 ModemManager                 umount.udisks2
+e4defrag                modinfo                      unafs
+eapmd5tojohn            modprobe                     undrop
+easside-ng              mosquitto                    unique
+ebtables                mount.cifs                   unix_chkpwd
+ebtables-nft            mount.fuse                   unix_update
+ebtables-nft-restore    mount.fuse3                  unshadow
+ebtables-nft-save       mount.lowntfs-3g             update-ca-certificates
+ebtables-restore        mount.nfs                    update-catalog
+ebtables-save           mount.nfs4                   update-command-not-found
+ebtables-translate      mount.ntfs                   update-cracklib
+ectool                  mount.ntfs-3g                updatedb.plocate
+elogtool                mount.smb3                   update-default-aspell
+ethtool                 mountstats                   update-default-ispell
+eventlogadm             mount.ubifs                  update-default-wordlist
+exfat2img               msgsnarf                     update-dictcommon-aspell
+exfatlabel              msrtool                      update-dictcommon-hunspell
+faillock                mtd_debug                    update-fmtutil
+fatlabel                mtdinfo                      update-fonts-alias
+fdisk                   mtdpart                      update-fonts-dir
+fectest                 mysqld                       update-fonts-scale
+filefrag                nameif                       update-grub
+filesnarf               nanddump                     update-grub2
+findfs                  nandflipbits                 update-gsfontmap
+fixparts                nandtest                     update-icon-caches
+flashcp                 nandwrite                    update-ieee-data
+flash_erase             netdiscover                  update-inetd
+flash_eraseall          netsniff-ng                  update-initramfs
+flash_lock              NetworkManager               update-java-alternatives
+flash_otp_dump          newusers                     update-language
+flash_otp_erase         nfnl_osf                     update-language-dat
+flash_otp_info          nfsconf                      update-language-def
+flash_otp_lock          nfsidmap                     update-language-lua
+flash_otp_write         nfsiostat                    update-locale
+flashrom                nfsstat                      update-passwd
+flash_unlock            nft                          update-pciids
+flowtop                 nftldump                     update-rc.d
+fmaptool                nftl_format                  update-shells
+fsck                    nginx                        update-smart-drivedb
+fsck.exfat              nmbd                         update-texmf
+fsck.ext2               nologin                      update-texmf-config
+fsck.ext3               ntfsclone                    update-tl-stacked-conffile
+fsck.ext4               ntfscp                       update-updmap
+fsck.fat                ntfslabel                    update-xmlcatalog
+fsck.msdos              ntfsresize                   urlsnarf
+fsck.ubifs              ntfsundelete                 usb_modeswitch
+fsck.vfat               nvramtool                    usb_modeswitch_dispatcher
+fsfreeze                on_ac_power                  usbmuxd
+fstab-decode            openconnect                  useradd
+fstrim                  openvas                      userdel
+ftl_check               openvpn                      usermod
+ftl_format              ownership                    validlocale
+gdisk                   pam-auth-update              vconfig
+gdm3                    pam_getenv                   vcstime
+genl                    pam_namespace_helper         vdpa
+genmkvpwd               pam_timestamp_check          veritysetup
+getcap                  paperconfig                  vigr
+get-iab                 parted                       vipw
+get-oui                 partprobe                    visudo
+getpcaps                pcscd                        vncpcap2john
+getty                   pg_updatedicts               vpddecode
+gnome-menus-blacklist   phpdismod                    vpnc
+gparted                 phpenmod                     vpnc-connect
+gpg2john                phpquery                     vpnc-disconnect
+groupadd                pivot_root                   webmitm
+groupdel                plipconfig                   webspy
+groupmod                plocate-build                wesside-ng
+grpck                   plymouthd                    wifite
+grpconv                 plymouth-set-default-theme   winbindd
+grpunconv               pmh7tool                     wipefs
+grub-install            poweroff                     wpa_action
+grub-macbless           pppd                         wpa_cli
+grub-mkconfig           pppdump                      wpapcap2john
+grub-mkdevicemap        pppoe-discovery              wpa_supplicant
+grub-probe              pppstats                     xfce4-kiosk-query
+grub-reboot             pptp                         xfce4-pm-helper
+grub-set-default        pptpsetup                    xfpm-power-backlight-helper
+gvmd                    ptunnel                      xtables-legacy-multi
+halt                    putty2john                   xtables-monitor
+haveged                 pwck                         xtables-nft-multi
+hccap2john              pwconv                       zic
+hdparm                  pwhistory_helper             zip2john
+hping3                  pwunconv                     zramctl
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /usr/sbin | grep 'cat'
+install-sgmlcatalog
+plocate-build
+tarcat
+update-ca-certificates
+update-catalog
+updatedb.plocate
+update-xmlcatalog
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls /usr/bin | grep 'cat'             
+bdftruncate
+blkcat
+bzcat
+cat
+catfish
+catman
+cryptcat
+debconf-communicate
+dh_installxmlcatalogs
+dislocate
+dumpmscat
+dviconcat
+expect_dislocate
+fallocate
+fcat
+fc-cat
+gapplication
+gencat
+hashcat
+icat
+img_cat
+jcat
+kali-deprecated
+llvm-cat-18
+llvm-cat-19
+locate
+lzcat
+mmcat
+netcat
+ntfscat
+ntfsfallocate
+ntfstruncate
+pamcat
+plocate
+pnmcat
+pnmmercator
+precat
+pw-cat
+pyobfuscate
+socat
+socat1
+socat-broker.sh
+socat-chain.sh
+socat-mux.sh
+sqfscat
+systemd-cat
+truncate
+xfce4-popup-applicationsmenu
+xmlcatalog
+xzcat
+zcat
+zstdcat
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls                      
+ assignment                       __MACOSX          online_applications.txt   review.txt
+ CompanyShare                     mkt_moving_repo  'os(mod3).txt'             romeo.txt
+ genymotion                       notes.txt         output.txt
+ genymotion-3.6.0-linux_x64.bin   notes.txt.save    README.md
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ /usr/bin/cat output.txt  
+hello 
+i 
+am 
+shivam
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cat output.txt 
+hello 
+i 
+am 
+shivam
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ /bin/cat output.txt    
+hello 
+i 
+am 
+shivam
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
