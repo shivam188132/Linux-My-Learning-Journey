@@ -1501,7 +1501,81 @@ CITY=Patna
 └─$ 
 --------------------------------------------------------------------------------------------------------------ENVIRONMENT_VARIABLE= PATH ------------------------------------------------------------------------------------------------------------------------------------
 
-
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo "${PATH}"
+/home/shivam1/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls            
+ assignment                       __MACOSX          online_applications.txt   review.txt
+ CompanyShare                     mkt_moving_repo  'os(mod3).txt'             romeo.txt
+ genymotion                       notes.txt         output.txt
+ genymotion-3.6.0-linux_x64.bin   notes.txt.save    README.md
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cat output.txt
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ xdg-open "output.txt" 
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cat output.txt       
+hello 
+i 
+am 
+shivam
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ /usr/bin/c
+Completing executable file
+c++@                            clang-linker-wrapper-19@      
+c89@                            clang-move-19@                
+c89-gcc*                        clang-nvlink-wrapper-19@      
+c99@                            clang-offload-bundler-19@     
+c99-gcc*                        clang-offload-packager-19@    
+cachepic@                       clang-pseudo-19@              
+cadaver*                        clang-query-19@               
+cameratopam*                    clang-refactor-19@            
+capinfos*                       clang-rename-19@              
+captoinfo@                      clang-reorder-fields-19@      
+captype*                        clang-repl-19@                
+cardos-tool*                    clang-scan-deps-19@           
+cat*                            clang-tblgen-19@              
+catfish*                        clear*                        
+catman*                         clear_console*                
+cc@                             closed_source_web_server_fuzz*
+ccache2john@                    cluster*                      
+ccomps*                         clusterdb@                    
+cct*                            cmp*                          
+cd-create-profile*              cmuwmtopbm*                   
+cd-fix-profile*                 codepage*                     
+cd-iccdump*                     col*                          
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ /usr/bin/cat output.txt
+hello 
+i 
+am 
+shivam
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo "${PATH}" | tr ':' '\n'   
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                                             
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
