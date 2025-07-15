@@ -1,0 +1,158 @@
+                                                                               
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ mkdir ./bin
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
+ assignment                       mkt_moving_repo               output.txt
+ bin                             'notes(environment_var).txt'   README.md
+ CompanyShare                     notes.txt                     review.txt
+ genymotion                       notes.txt.save                romeo.txt
+ genymotion-3.6.0-linux_x64.bin   online_applications.txt
+ __MACOSX                        'os(mod3).txt'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ rm ./bin
+rm: cannot remove './bin': Is a directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ rm bin     
+rm: cannot remove 'bin': Is a directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ rm -rf bin
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
+ assignment                       mkt_moving_repo              'os(mod3).txt'
+ CompanyShare                    'notes(environment_var).txt'   output.txt
+ genymotion                       notes.txt                     README.md
+ genymotion-3.6.0-linux_x64.bin   notes.txt.save                review.txt
+ __MACOSX                         online_applications.txt       romeo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ mkdir ~/bin
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo 'echo "Hello World!" ' > ~/bin/my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ chmod +x ~/bin/my_script 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ export PATH="${PATH}:~/bin"
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ my_script
+my_script: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cd ~/bin/
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ;s
+s: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ls
+my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ls -l my_script 
+-rwxrwxr-x 1 shivam1 shivam1 21 Jul 15 10:17 my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | grep "my_script"
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}"                   
+/home/shivam1/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion:~/bin
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | tr ':' '/n'
+/home/shivam1/.local/bin//usr/local/sbin//usr/sbin//sbin//usr/local/bin//usr/bin//bin//usr/local/games//usr/games//snap/bin//home/shivam1/.dotnet/tools//home/shivam1/Linux/genymotion/~/bin
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+~/bin
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ my_script
+my_script: command not found
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ pwd
+/home/shivam1/bin
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ export PATH="${PATH}:/home/shivam1/bin"
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | tr ':' '\n'           
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+~/bin
+/home/shivam1/bin
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ my_script
+Hello World!
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ which my_script
+/home/shivam1/bin/my_script
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ which python
+/usr/bin/python
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ export PATH=$(echo "${PATH}" | awk -v RS=: '!a[$0]++' | paste -sd:)  # Remove duplicates
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/shivam1/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+~/bin
+/home/shivam1/bin
+
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ type -a python
+python is /usr/bin/python
+python is /bin/python
+                                                                        
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ 
