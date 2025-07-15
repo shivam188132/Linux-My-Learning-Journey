@@ -156,3 +156,206 @@ python is /bin/python
                                                                         
 ┌──(shivam1㉿Venom)-[~/bin]
 └─$ 
+----------------------------------------------modifying environment variable --------------------------------------------------------------------------------------------------------------
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ls
+my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ touch hello_world
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ls
+hello_world  my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ chmod +x hello_world 
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ls
+hello_world  my_script
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/shivam1/.local/bin
+/home/shivam1/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ nano hello_world
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ python3 hello_world
+Hello world from python
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ python hello_world
+Hello world from python
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ hello_world
+/home/shivam1/bin/hello_world: 1: Syntax error: word unexpected (expecting ")")
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ nano hello_world
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ hello_world     
+Hello world from python
+                                                                                
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ ~/bin/hello_world 
+Hello world from python
+
+------------------------------------------------------------------------------------------UTILIZING ENVIRONMENT VARIABLE DATA TRANSFER INTO PROGRAMS ------------------------------------------------
+
+                                                                                 
+┌──(shivam1㉿Venom)-[~/bin]
+└─$ cd ..
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Documents   Music      resume        Templates    'virtubox asst'
+ demo2.txt   Downloads   Pictures   safe_folder   testing.txt   vscode
+ Desktop     Linux       Public     shibu         Videos
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ export LOGIN_CONFIG='secret'
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ env
+NMAP_PRIVILEGED=
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SESSION_MANAGER=local/Venom:@/tmp/.ICE-unix/1993,unix/Venom:/tmp/.ICE-unix/1993
+LANG=en_IN
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/61d71090_da60_4788_9060_b78491e21f51
+XDG_CURRENT_DESKTOP=GNOME
+SYSTEMD_EXEC_PID=2026
+POWERSHELL_UPDATECHECK=Off
+DISPLAY=:1
+LANGUAGE=en_IN:en
+QT_IM_MODULE=ibus
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+USER=shivam1
+DESKTOP_SESSION=gnome
+XDG_MENU_PREFIX=gnome-
+HOME=/home/shivam1
+PWD=/home/shivam1
+COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+IM_CONFIG_PHASE=1
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+XDG_DATA_DIRS=/usr/share/gnome:/home/shivam1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+WINDOWPATH=2
+XDG_SESSION_DESKTOP=gnome
+QT_ACCESSIBILITY=1
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+VTE_VERSION=8001
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+GNOME_TERMINAL_SERVICE=:1.131
+DOTNET_CLI_TELEMETRY_OPTOUT=1
+PATH=/home/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion
+XDG_RUNTIME_DIR=/run/user/1000
+XMODIFIERS=@im=ibus
+SHELL=/usr/bin/zsh
+POWERSHELL_TELEMETRY_OPTOUT=1
+XDG_SESSION_TYPE=x11
+LOGNAME=shivam1
+USERNAME=shivam1
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure
+GDM_LANG=en_IN
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+QT_QPA_PLATFORMTHEME=qt5ct
+COLORTERM=truecolor
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+TERM=xterm-256color
+GDMSESSION=gnome
+XDG_SESSION_CLASS=user
+SHLVL=1
+OLDPWD=/home/shivam1/bin
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90::ow=30;44:
+LESS_TERMCAP_mb=
+LESS_TERMCAP_md=
+LESS_TERMCAP_me=
+LESS_TERMCAP_so=
+LESS_TERMCAP_se=
+LESS_TERMCAP_us=
+LESS_TERMCAP_ue=
+LOGIN_CONFIG=secret
+_=/usr/bin/env
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ env | grep 'LOGIN_'
+LOGIN_CONFIG=secret
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Linux/
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
+ assignment                       mkt_moving_repo              'os(mod3).txt'
+ CompanyShare                    'notes(environment_var).txt'   output.txt
+ genymotion                       notes.txt                     README.md
+ genymotion-3.6.0-linux_x64.bin   notes.txt.save                review.txt
+ __MACOSX                         online_applications.txt       romeo.txt
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py
+environ({'NMAP_PRIVILEGED': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SESSION_MANAGER': 'local/Venom:@/tmp/.ICE-unix/1993,unix/Venom:/tmp/.ICE-unix/1993', 'LANG': 'en_IN', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/61d71090_da60_4788_9060_b78491e21f51', 'XDG_CURRENT_DESKTOP': 'GNOME', 'SYSTEMD_EXEC_PID': '2026', 'POWERSHELL_UPDATECHECK': 'Off', 'DISPLAY': ':1', 'LANGUAGE': 'en_IN:en', 'QT_IM_MODULE': 'ibus', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'USER': 'shivam1', 'DESKTOP_SESSION': 'gnome', 'XDG_MENU_PREFIX': 'gnome-', 'HOME': '/home/shivam1', 'PWD': '/home/shivam1/Linux', 'COMMAND_NOT_FOUND_INSTALL_PROMPT': '1', 'IM_CONFIG_PHASE': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/shivam1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'WINDOWPATH': '2', 'XDG_SESSION_DESKTOP': 'gnome', 'QT_ACCESSIBILITY': '1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'VTE_VERSION': '8001', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'GNOME_TERMINAL_SERVICE': ':1.131', 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'PATH': '/home/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XMODIFIERS': '@im=ibus', 'SHELL': '/usr/bin/zsh', 'POWERSHELL_TELEMETRY_OPTOUT': '1', 'XDG_SESSION_TYPE': 'x11', 'LOGNAME': 'shivam1', 'USERNAME': 'shivam1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'GDM_LANG': 'en_IN', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'QT_QPA_PLATFORMTHEME': 'qt5ct', 'COLORTERM': 'truecolor', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'TERM': 'xterm-256color', 'GDMSESSION': 'gnome', 'XDG_SESSION_CLASS': 'user', 'SHLVL': '1', 'OLDPWD': '/home/shivam1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90::ow=30;44:', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LESS_TERMCAP_md': '\x1b[1;36m', 'LESS_TERMCAP_me': '\x1b[0m', 'LESS_TERMCAP_so': '\x1b[01;33m', 'LESS_TERMCAP_se': '\x1b[0m', 'LESS_TERMCAP_us': '\x1b[1;32m', 'LESS_TERMCAP_ue': '\x1b[0m', 'LOGIN_CONFIG': 'secret', '_': '/usr/bin/python'})
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py | grep 'LOGIN_'
+environ({'NMAP_PRIVILEGED': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SESSION_MANAGER': 'local/Venom:@/tmp/.ICE-unix/1993,unix/Venom:/tmp/.ICE-unix/1993', 'LANG': 'en_IN', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/61d71090_da60_4788_9060_b78491e21f51', 'XDG_CURRENT_DESKTOP': 'GNOME', 'SYSTEMD_EXEC_PID': '2026', 'POWERSHELL_UPDATECHECK': 'Off', 'DISPLAY': ':1', 'LANGUAGE': 'en_IN:en', 'QT_IM_MODULE': 'ibus', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'USER': 'shivam1', 'DESKTOP_SESSION': 'gnome', 'XDG_MENU_PREFIX': 'gnome-', 'HOME': '/home/shivam1', 'PWD': '/home/shivam1/Linux', 'COMMAND_NOT_FOUND_INSTALL_PROMPT': '1', 'IM_CONFIG_PHASE': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/shivam1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'WINDOWPATH': '2', 'XDG_SESSION_DESKTOP': 'gnome', 'QT_ACCESSIBILITY': '1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'VTE_VERSION': '8001', 'QT_AUTO_SCREEN_SCALE_FACTOR': '0', 'GNOME_TERMINAL_SERVICE': ':1.131', 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'PATH': '/home/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XMODIFIERS': '@im=ibus', 'SHELL': '/usr/bin/zsh', 'POWERSHELL_TELEMETRY_OPTOUT': '1', 'XDG_SESSION_TYPE': 'x11', 'LOGNAME': 'shivam1', 'USERNAME': 'shivam1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'GDM_LANG': 'en_IN', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'QT_QPA_PLATFORMTHEME': 'qt5ct', 'COLORTERM': 'truecolor', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'TERM': 'xterm-256color', 'GDMSESSION': 'gnome', 'XDG_SESSION_CLASS': 'user', 'SHLVL': '1', 'OLDPWD': '/home/shivam1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90::ow=30;44:', 'LESS_TERMCAP_mb': '\x1b[1;31m', 'LESS_TERMCAP_md': '\x1b[1;36m', 'LESS_TERMCAP_me': '\x1b[0m', 'LESS_TERMCAP_so': '\x1b[01;33m', 'LESS_TERMCAP_se': '\x1b[0m', 'LESS_TERMCAP_us': '\x1b[1;32m', 'LESS_TERMCAP_ue': '\x1b[0m', 'LOGIN_CONFIG': 'secret', '_': '/usr/bin/python'})
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py
+secret
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py  
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py 
+secret
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py  
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py
+new secret
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ echo "${LOGIN_CONFIG}"
+secret
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ nano env.py
+                                                                                 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ python env.py         
+secret
+-----------------------------------------------------------------------------------------RETRIVE THE DEFAULT SHELL ------------------------------------------------------------------------------------------------                               
