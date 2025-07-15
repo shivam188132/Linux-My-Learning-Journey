@@ -359,3 +359,41 @@ secret
 └─$ python env.py         
 secret
 -----------------------------------------------------------------------------------------RETRIVE THE DEFAULT SHELL ------------------------------------------------------------------------------------------------                               
+┌──(shivam1㉿Venom)-[~]
+└─$ echo "${SHELL}"                    
+/usr/bin/zsh
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ bash
+┌──(shivam1㉿Venom)-[~]
+└─$ echo "${SHELL}"
+/usr/bin/zsh
+
+┌──(shivam1㉿Venom)-[~]
+└─$ zsh
+┌──(shivam1㉿Venom)-[~]
+└─$ chsh -s "/bin/bash"
+Password: 
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/shells
+# /etc/shells: valid login shells
+/bin/sh
+/usr/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/usr/bin/dash
+/usr/bin/pwsh
+/opt/microsoft/powershell/7/pwsh
+/usr/bin/screen
+/usr/bin/tmux
+/bin/zsh
+/usr/bin/zsh
+                                                                                 
+┌──(shivam1㉿Venom)-[~]
+└─$ chsh -s "/bin/zsh" 
+Password: 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
