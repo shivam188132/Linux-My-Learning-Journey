@@ -1,3 +1,4 @@
-Bash is Amazing
--rw-rw-r-- 1 shivam shivam 16 Jun 22 13:27 output.txt
-I am Noob
+hello 
+i 
+am 
+shivam
