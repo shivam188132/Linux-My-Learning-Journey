@@ -396,4 +396,82 @@ Password:
 └─$ chsh -s "/bin/zsh" 
 Password: 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------ALIAS IN BASH ------------------------------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls 
+ assignment                       mkt_moving_repo               output.txt
+ CompanyShare                    'notes(environment_var).txt'   README.md
+ env.py                           notes.txt                     review.txt
+ genymotion                       notes.txt.save                romeo.txt
+ genymotion-3.6.0-linux_x64.bin   online_applications.txt
+ __MACOSX                        'os(mod3).txt'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ alias gohome='cd ~'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ gohome
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ alias ll='ls -la'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ll
+total 260
+drwx------ 32 shivam1 shivam1  4096 Jul 20 14:50  .
+drwxr-xr-x  3 root    root     4096 Jul  4 12:42  ..
+drwxr-x---  2 shivam1 shivam1  4096 Jul  9 11:10  .android
+-rw-------  1 shivam1 shivam1   507 Jul 19 13:32  .bash_history
+-rw-r--r--  1 shivam1 shivam1   220 Jul  4 12:42  .bash_logout
+-rw-r--r--  1 shivam1 shivam1  5790 Jul 19 13:30  .bashrc
+-rw-r--r--  1 shivam1 shivam1  5665 Jul 11 15:59  .bashrc.backup
+-rw-r--r--  1 shivam1 shivam1  3526 Jul  4 12:42  .bashrc.original
+drwxrwxr-x  2 shivam1 shivam1  4096 Jul 19 13:39  bin
+drwx------ 25 shivam1 shivam1  4096 Jul 20 11:48  .cache
+drwxr-xr-x 25 shivam1 shivam1  4096 Jul 18 14:39  .config
+-rw-rw-r--  1 shivam1 shivam1 11058 Jul 14 15:29  demo2.txt
+drwxr-xr-x  2 shivam1 shivam1  4096 Jul  4 12:49  Desktop
+drwxr-xr-x  3 shivam1 shivam1  4096 Jul 20 14:25  Documents
+drwxrwxr-x  3 shivam1 shivam1  4096 Jul 11 15:50  .dotnet
+drwxr-xr-x  4 shivam1 shivam1  4096 Jul 20 14:40  Downloads
+-rw-r--r--  1 shivam1 shivam1 11759 Jul  4 12:42  .face
+lrwxrwxrwx  1 shivam1 shivam1     5 Jul  4 12:42  .face.icon -> .face
+drwxrwxr-x  3 shivam1 shivam1  4096 Jul 17 14:21  .Genymobile
+-rw-rw-r--  1 shivam1 shivam1    60 Jul  4 17:17  .gitconfig
+drwxr-xr-x  3 shivam1 shivam1  4096 Jul  4 12:42  .java
+drwx------  2 shivam1 shivam1  4096 Jul  7 11:55  .john
+drwxrwxr-x  8 shivam1 shivam1  4096 Jul 20 14:11  Linux
+drwxr-xr-x  5 shivam1 shivam1  4096 Jul  4 12:49  .local
+drwx------  4 shivam1 shivam1  4096 Jul  4 12:50  .mozilla
+drwxr-xr-x  2 shivam1 shivam1  4096 Jul  7 09:59  Music
+drwxrwxr-x  4 shivam1 shivam1  4096 Jul 14 11:56  .npm
+drwxr-xr-x  4 shivam1 shivam1  4096 Jul 14 18:12  Pictures
+drwx------  3 shivam1 shivam1  4096 Jul  4 14:47  .pki
+-rw-r--r--  1 shivam1 shivam1   807 Jul  4 12:42  .profile
+drwxr-xr-x  2 shivam1 shivam1  4096 Jul  4 12:49  Public
+-rw-------  1 shivam1 shivam1   142 Jul 11 16:50  .python_history
+drwxrwxr-x  2 shivam1 shivam1  4096 Jul  9 14:06  resume
+drwxrwxr-x  2 shivam1 shivam1  4096 Jul 18 16:54  safe_folder
+drwxrwxr-x  3 shivam1 shivam1  4096 Jul 18 15:05  scrcpy
+drwxrwxr-x  5 shivam1 shivam1  4096 Jul 11 15:57  shibu
+drwx------  2 shivam1 shivam1  4096 Jul  4 17:26  .ssh
+-rw-r--r--  1 shivam1 shivam1     0 Jul  4 12:54  .sudo_as_admin_successful
+drwxr-xr-x  2 shivam1 shivam1  4096 Jul  4 12:49  Templates
+-rw-rw-r--  1 shivam1 shivam1 10934 Jul 11 16:22  testing.txt
+drwxr-xr-x  3 shivam1 shivam1  4096 Jul  8 23:49  .var
+drwxr-xr-x  4 shivam1 shivam1  4096 Jul 20 14:49  Videos
+drwxrwxr-x  4 shivam1 shivam1  4096 Jul 11 15:39 'virtubox asst'
+drwxrwxr-x  4 shivam1 shivam1  4096 Jul 11 15:49  .vscode
+drwxrwxr-x  5 shivam1 shivam1  4096 Jul 20 11:47  vscode
+-rw-rw-r--  1 shivam1 shivam1   212 Jul 18 15:04  .wget-hsts
+-rw-rw-r--  1 shivam1 shivam1    36 Jul 17 10:48  .xprofile
+-rw-r--r--  1 shivam1 shivam1   336 Jul  4 12:42  .zprofile
+-rw-------  1 shivam1 shivam1 31909 Jul 20 14:50  .zsh_history
+-rw-r--r--  1 shivam1 shivam1 10876 Jul 19 13:42  .zshrc
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ alias c='clear'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
