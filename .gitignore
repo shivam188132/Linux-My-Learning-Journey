@@ -1,5 +1,16 @@
 # existing ignored files...
 
+# Directories to ignore
 mkt_moving_repo/
 __MACOSX/
+genymotion/
+
+# Specific files to ignore
+online_applications.txt
+genymotion-3.6.0-linux_x64.bin
+output.txt
+
+# Patterns for temporary/generated files
+*.save
+*.bin
 
