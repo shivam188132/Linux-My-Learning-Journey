@@ -474,4 +474,90 @@ drwxrwxr-x  5 shivam1 shivam1  4096 Jul 20 11:47  vscode
                                                                                 
 ┌──(shivam1㉿Venom)-[~]
 └─$ 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------SET COMMAND IN LINUX ---------------------------------------------------------------------------------------------------------
++precmd:2> print -Pnr -- $'\C-[]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\C-G'
++precmd:5> [ yes '=' yes ']'
++precmd:6> [ -z 1 ']'
++precmd:9> print ''
+
++_zsh_highlight_main__precmd_hook:3> setopt localoptions
++_zsh_highlight_main__precmd_hook:4> eval '[[ -o warnnestedvar ]]'
++(eval):1> [[ -o warnnestedvar ]]
++_zsh_highlight_main__precmd_hook:8> _zsh_highlight_main__command_type_cache=( ) 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
++_zsh_highlight_preexec_hook:2> typeset -g _ZSH_HIGHLIGHT_PRIOR_BUFFER=''
++_zsh_highlight_preexec_hook:3> typeset -gi _ZSH_HIGHLIGHT_PRIOR_CURSOR=''
++zsh:8> ls '--color=auto'
+ assignment                       mkt_moving_repo               output.txt
+ CompanyShare                    'notes(environment_var).txt'   README.md
+ env.py                           notes.txt                     review.txt
+ genymotion                       notes.txt.save                romeo.txt
+ genymotion-3.6.0-linux_x64.bin   online_applications.txt
+ __MACOSX                        'os(mod3).txt'
++precmd:2> print -Pnr -- $'\C-[]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\C-G'
++precmd:5> [ yes '=' yes ']'
++precmd:6> [ -z 1 ']'
++precmd:9> print ''
+
++_zsh_highlight_main__precmd_hook:3> setopt localoptions
++_zsh_highlight_main__precmd_hook:4> eval '[[ -o warnnestedvar ]]'
++(eval):1> [[ -o warnnestedvar ]]
++_zsh_highlight_main__precmd_hook:8> _zsh_highlight_main__command_type_cache=( ) 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cd ~
++_zsh_highlight_preexec_hook:2> typeset -g _ZSH_HIGHLIGHT_PRIOR_BUFFER=''
++_zsh_highlight_preexec_hook:3> typeset -gi _ZSH_HIGHLIGHT_PRIOR_CURSOR=''
++zsh:9> cd /home/shivam1
++precmd:2> print -Pnr -- $'\C-[]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\C-G'
++precmd:5> [ yes '=' yes ']'
++precmd:6> [ -z 1 ']'
++precmd:9> print ''
+
++_zsh_highlight_main__precmd_hook:3> setopt localoptions
++_zsh_highlight_main__precmd_hook:4> eval '[[ -o warnnestedvar ]]'
++(eval):1> [[ -o warnnestedvar ]]
++_zsh_highlight_main__precmd_hook:8> _zsh_highlight_main__command_type_cache=( ) 
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Linux
++_zsh_highlight_preexec_hook:2> typeset -g _ZSH_HIGHLIGHT_PRIOR_BUFFER=''
++_zsh_highlight_preexec_hook:3> typeset -gi _ZSH_HIGHLIGHT_PRIOR_CURSOR=''
++zsh:10> cd Linux
++precmd:2> print -Pnr -- $'\C-[]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\C-G'
++precmd:5> [ yes '=' yes ']'
++precmd:6> [ -z 1 ']'
++precmd:9> print ''
+
++_zsh_highlight_main__precmd_hook:3> setopt localoptions
++_zsh_highlight_main__precmd_hook:4> eval '[[ -o warnnestedvar ]]'
++(eval):1> [[ -o warnnestedvar ]]
++_zsh_highlight_main__precmd_hook:8> _zsh_highlight_main__command_type_cache=( ) 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
++_zsh_highlight_preexec_hook:2> typeset -g _ZSH_HIGHLIGHT_PRIOR_BUFFER=''
++_zsh_highlight_preexec_hook:3> typeset -gi _ZSH_HIGHLIGHT_PRIOR_CURSOR=''
++zsh:11> ls '--color=auto'
+ assignment                       mkt_moving_repo               output.txt
+ CompanyShare                    'notes(environment_var).txt'   README.md
+ env.py                           notes.txt                     review.txt
+ genymotion                       notes.txt.save                romeo.txt
+ genymotion-3.6.0-linux_x64.bin   online_applications.txt
+ __MACOSX                        'os(mod3).txt'
++precmd:2> print -Pnr -- $'\C-[]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\C-G'
++precmd:5> [ yes '=' yes ']'
++precmd:6> [ -z 1 ']'
++precmd:9> print ''
+
++_zsh_highlight_main__precmd_hook:3> setopt localoptions
++_zsh_highlight_main__precmd_hook:4> eval '[[ -o warnnestedvar ]]'
++(eval):1> [[ -o warnnestedvar ]]
++_zsh_highlight_main__precmd_hook:8> _zsh_highlight_main__command_type_cache=( ) 
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ set +x 
++_zsh_highlight_preexec_hook:2> typeset -g _ZSH_HIGHLIGHT_PRIOR_BUFFER=''
++_zsh_highlight_preexec_hook:3> typeset -gi _ZSH_HIGHLIGHT_PRIOR_CURSOR=''
++zsh:12> set +x
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$  
+--------------------------------------------
