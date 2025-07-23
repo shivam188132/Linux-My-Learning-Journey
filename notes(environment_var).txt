@@ -560,4 +560,3 @@ drwxrwxr-x  5 shivam1 shivam1  4096 Jul 20 11:47  vscode
                                                                                 
 ┌──(shivam1㉿Venom)-[~/Linux]
 └─$  
---------------------------------------------

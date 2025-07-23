@@ -1,0 +1,28 @@
+------------------------------------------------------------------------THE PS1 VARIABLE --------------------------------------------------------------------------------------------------------------------
+
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ PS1='HELLO BASH'
+                                                                       
+HELLO BASHPS1='HELLO BASH '
+                                                                       
+HELLO BASH PS1='HELLO BASH$ '
+                                                                       
+HELLO BASH$ pwd
+/home/shivam1/Linux
+                                                                       
+HELLO BASH$ PS1="\u@\H:\w$ "
+                                                                       
+\u@\H:\w$ bash
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ PS1='HELLO BASH$ '
+
+HELLO BASH$ PS1='\u@\H:\w$ '
+
+shivam1@Venom:~/Linux$ PS1='\u@\H:\W$ '
+
+shivam1@Venom:Linux$ PS1='\u@\H:\W:\t$ '
+
+shivam1@Venom:Linux:12:45:24$ PS1='\u@\H:\W:\@$ '
+
+shivam1@Venom:Linux:12:45 PM$ 
+---------------------------------------------------------
