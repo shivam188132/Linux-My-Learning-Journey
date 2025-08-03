@@ -1,2 +1,3 @@
 192K	IMG_01.png
 du: cannot access 'IMG_O4.png': No such file or directory
+4.0K	another.txt

@@ -1,0 +1,589 @@
+┌──(shivam1㉿Venom)-[~]
+└─$ ls 
+ bin         Documents   Music      resume        shibu         Videos
+ demo2.txt   Downloads   Pictures   safe_folder   Templates    'virtubox asst'
+ Desktop     Linux       Public     scrcpy        testing.txt   vscode
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls *
+ demo2.txt   testing.txt
+
+bin:
+diskchecker  hello_world  my_script
+
+Desktop:
+
+Documents:
+Linux-Udemy  personal.txt  shortcuts.txt
+
+Downloads:
+ 0bff420c-ae21-41b8-8c2d-dfa2c240094bG_PS_Jharkhand_JD.docx
+ 0bff420c-ae21-41b8-8c2d-dfa2c240094bG_PS_Jharkhand_JD.pdf
+ adblock_plus-4.22.2.xpi
+ amdgpu-install_6.4.60401-1_all.deb
+ bquxjob_344f09d7_1983ff567e0.csv
+ bquxjob_3f127f16_1980782deaa.csv
+'Brave Passwords.csv'
+ clipboard-indicatortudmotu.com.v68.shell-extension
+ com.mattjakeman.ExtensionManager.flatpakref
+ datasets
+ demo.txt
+ fCsAUp2T.csv.part
+ feedbacks_raw_changelog_ndjson.json
+ feedbacks_raw_changelog_simulated.json
+ genymotion-3.9.0-linux_x64.run
+ genymotion.txt
+ google-services.json
+ index.html
+"kiosk Clientele UX Research - Anna's  - Required Data.csv"
+'Linux(udemy) - DeepSeek.docx'
+ _MConverter.eu_text.odt
+ nil
+'Offer Letter - Training - VB_HRO_25_IN_051 - Shivam Kumar (1).pdf'
+'Offer Letter - Training - VB_HRO_25_IN_051 - Shivam Kumar.pdf'
+ output.html
+ output.txt
+ pm-p1.pdf
+ prince.txt
+ Resume_TPBIT-BTECH10672211728652472.pdf
+ r_ticket.pdf
+ scrcpy-linux-x86_64-v3.3.1.tar.gz
+'Screenshot from 2025-06-16 12-54-45.png'
+ shivam_kr_ds-1.pdf
+'shivam_kr_ds (1).pdf'
+ shivam_kr_ds.pdf
+'Untitled spreadsheet.xlsx'
+'Untitled video - Made with Clipchamp.mp4'
+'videomessage-29.11.2024 11_13_15.webm'
+'virtukiosk_analytics_data_20250630 - events_intraday_20250630.xlsx'
+'wallpaperflare.com_wallpaper(1).jpg'
+
+Linux:
+ assignment                       notes.txt
+ clear.txt                        notes.txt.save
+ CompanyShare                     online_applications.txt
+ env.py                          'os(mod3).txt'
+ genymotion                       output.txt
+ genymotion-3.6.0-linux_x64.bin   README.md
+ __MACOSX                         review.txt
+ mkt_moving_repo                  romeo.txt
+'notes(environment_var).txt'     'section_11(creating a custom bash prompt)'
+
+Music:
+
+Pictures:
+Screenshots  wallpapers
+
+Public:
+
+resume:
+shivam_resume2.pdf  shivam_resume.pdf
+
+safe_folder:
+ethical_hacking.txt  git_ssh_key.txt  Im.txt  linux_custom.txt
+
+scrcpy:
+scrcpy-linux-x86_64-v3.3.1
+
+shibu:
+bin  include  lib  lib64  pyvenv.cfg
+
+Templates:
+
+Videos:
+Hidamari  Screencasts
+
+'virtubox asst':
+ database_firebase.txt
+'database report.pdf'
+'Diagnostic Kiosk UI and Analytics - Grok_files'
+'Diagnostic Kiosk UI and Analytics - Grok.html'
+ final_dbdesign.png
+ firebase_testing
+ kioks_column.pdf
+ kioks_column.txt
+ kiosks_uta.pdf
+ mermaid.txt
+ notes.txt
+ OnlineNewsPopularity.csv
+ Public_Kiosk_Analytics.pdf
+'Screenshot From 2025-07-11 10-54-50.png'
+'virtukiosk_analytics_data_20250630 - events_intraday_20250630.csv'
+
+vscode:
+Figma  main.py  New  virtubox-analytics
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Documents   Music      resume        shibu         Videos
+ demo2.txt   Downloads   Pictures   safe_folder   Templates    'virtubox asst'
+ Desktop     Linux       Public     scrcpy        testing.txt   vscode
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls bin         Documents   Music      resume        shibu         Videos
+ demo2.txt   Downloads   Pictures   safe_folder   Templates    'virtubox asst'
+ Desktop     Linux       Public     scrcpy        testing.txt   vscode
+
+bin:
+diskchecker  hello_world  my_script
+
+Documents:
+Linux-Udemy  personal.txt  shortcuts.txt
+
+Music:
+
+resume:
+shivam_resume2.pdf  shivam_resume.pdf
+
+shibu:
+bin  include  lib  lib64  pyvenv.cfg
+
+Videos:
+Hidamari  Screencasts
+demo2.txt: command not found
+Desktop: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls bin         Documents   Music      resume        shibu         Videos   Downloads   Pictures   safe_folder   Templates    'virtubox asst'   
+ Desktop     Linux       Public     scrcpy           vscode           
+
+bin:
+diskchecker  hello_world  my_script
+
+Documents:
+Linux-Udemy  personal.txt  shortcuts.txt
+
+Downloads:
+ 0bff420c-ae21-41b8-8c2d-dfa2c240094bG_PS_Jharkhand_JD.docx
+ 0bff420c-ae21-41b8-8c2d-dfa2c240094bG_PS_Jharkhand_JD.pdf
+ adblock_plus-4.22.2.xpi
+ amdgpu-install_6.4.60401-1_all.deb
+ bquxjob_344f09d7_1983ff567e0.csv
+ bquxjob_3f127f16_1980782deaa.csv
+'Brave Passwords.csv'
+ clipboard-indicatortudmotu.com.v68.shell-extension
+ com.mattjakeman.ExtensionManager.flatpakref
+ datasets
+ demo.txt
+ fCsAUp2T.csv.part
+ feedbacks_raw_changelog_ndjson.json
+ feedbacks_raw_changelog_simulated.json
+ genymotion-3.9.0-linux_x64.run
+ genymotion.txt
+ google-services.json
+ index.html
+"kiosk Clientele UX Research - Anna's  - Required Data.csv"
+'Linux(udemy) - DeepSeek.docx'
+ _MConverter.eu_text.odt
+ nil
+'Offer Letter - Training - VB_HRO_25_IN_051 - Shivam Kumar (1).pdf'
+'Offer Letter - Training - VB_HRO_25_IN_051 - Shivam Kumar.pdf'
+ output.html
+ output.txt
+ pm-p1.pdf
+ prince.txt
+ Resume_TPBIT-BTECH10672211728652472.pdf
+ r_ticket.pdf
+ scrcpy-linux-x86_64-v3.3.1.tar.gz
+'Screenshot from 2025-06-16 12-54-45.png'
+ shivam_kr_ds-1.pdf
+'shivam_kr_ds (1).pdf'
+ shivam_kr_ds.pdf
+'Untitled spreadsheet.xlsx'
+'Untitled video - Made with Clipchamp.mp4'
+'videomessage-29.11.2024 11_13_15.webm'
+'virtukiosk_analytics_data_20250630 - events_intraday_20250630.xlsx'
+'wallpaperflare.com_wallpaper(1).jpg'
+
+Music:
+
+Pictures:
+Screenshots  wallpapers
+
+resume:
+shivam_resume2.pdf  shivam_resume.pdf
+
+safe_folder:
+ethical_hacking.txt  git_ssh_key.txt  Im.txt  linux_custom.txt
+
+shibu:
+bin  include  lib  lib64  pyvenv.cfg
+
+Templates:
+
+Videos:
+Hidamari  Screencasts
+
+'virtubox asst':
+ database_firebase.txt
+'database report.pdf'
+'Diagnostic Kiosk UI and Analytics - Grok_files'
+'Diagnostic Kiosk UI and Analytics - Grok.html'
+ final_dbdesign.png
+ firebase_testing
+ kioks_column.pdf
+ kioks_column.txt
+ kiosks_uta.pdf
+ mermaid.txt
+ notes.txt
+ OnlineNewsPopularity.csv
+ Public_Kiosk_Analytics.pdf
+'Screenshot From 2025-07-11 10-54-50.png'
+'virtukiosk_analytics_data_20250630 - events_intraday_20250630.csv'
+Desktop: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ echo *
+bin demo2.txt Desktop Documents Downloads Linux Music Pictures Public resume safe_folder scrcpy shibu Templates testing.txt Videos virtubox asst vscode
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ echo *.txt
+demo2.txt testing.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ cd linux
+cd: no such file or directory: linux
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Linux
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cd assignment/ 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment]
+└─$ mkdir s12
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment]
+└─$ cd s12
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ touch a.txt b.txt abc.txt ram.txt ram.pptx ram.csv a.csv a.docs
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+abc.txt  a.csv  a.docs  a.txt  b.txt  ram.csv  ram.pptx  ram.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo *.txt
+abc.txt a.txt b.txt ram.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ?.txt
+a.txt b.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo [ab].txt
+a.txt b.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo [abc].txt
+a.txt b.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ???.txt  
+abc.txt ram.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo /home/shivam1/Linux/assignment/s12/*.txt
+/home/shivam1/Linux/assignment/s12/abc.txt /home/shivam1/Linux/assignment/s12/a.txt /home/shivam1/Linux/assignment/s12/b.txt /home/shivam1/Linux/assignment/s12/ram.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo /home/shivam1/Linux/assignment/s12/*.csv
+/home/shivam1/Linux/assignment/s12/a.csv /home/shivam1/Linux/assignment/s12/ram.csv
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls ~
+ bin         Downloads   Public        shibu        'virtubox asst'
+ demo2.txt   Linux       resume        Templates     vscode
+ Desktop     Music       safe_folder   testing.txt
+ Documents   Pictures    scrcpy        Videos
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls "${HOME}"
+ bin         Downloads   Public        shibu        'virtubox asst'
+ demo2.txt   Linux       resume        Templates     vscode
+ Desktop     Music       safe_folder   testing.txt
+ Documents   Pictures    scrcpy        Videos
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ HOME=/
+                                                                       
+┌──(shivam1㉿Venom)-[/home/shivam1/Linux/assignment/s12]
+└─$ ls "${HOME}"
+bin   home            lib32       mnt   run   tmp      vmlinuz.old
+boot  initrd.img      lib64       opt   sbin  usr
+dev   initrd.img.old  lost+found  proc  srv   var
+etc   lib             media       root  sys   vmlinuz
+                                                                       
+┌──(shivam1㉿Venom)-[/home/shivam1/Linux/assignment/s12]
+└─$ echo ~
+/
+                                                                       
+┌──(shivam1㉿Venom)-[/home/shivam1/Linux/assignment/s12]
+└─$ HOME=/home/shivam1 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls "${HOME}"      
+ bin         Downloads   Public        shibu        'virtubox asst'
+ demo2.txt   Linux       resume        Templates     vscode
+ Desktop     Music       safe_folder   testing.txt
+ Documents   Pictures    scrcpy        Videos
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~            
+/home/shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~+  
+/home/shivam1/Linux/assignment/s12
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~-
+/home/shivam1/Linux/assignment
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~ /+ 
+/home/shivam1 /+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~ + 
+/home/shivam1 +
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~/+ 
+/home/shivam1/+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~/ +
+/home/shivam1/ +
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~+   
+/home/shivam1/Linux/assignment/s12
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~ /Linux
+/home/shivam1 /Linux
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo ~/Linux  
+/home/shivam1/Linux
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo $HOME 
+/home/shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "{$HOME}" 
+{/home/shivam1}
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${HOME}" 
+/home/shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${HOME}_backup"
+/home/shivam1_backup
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${HOME}"       
+/home/shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "$HOME_backup"
+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ file="My Document.txt"  
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ cat "$file"
+cat: 'My Document.txt': No such file or directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ export file="My Document.txt"  
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ cat "$file"                    
+cat: 'My Document.txt': No such file or directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ env | grep "file"
+file=My Document.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "$file"
+My Document.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo $file  
+My Document.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ${#PATH}
+200: command not found
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${#PATH}"
+200
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${#HOME}"
+13
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${HOME}" 
+/home/shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${PATH:0:10}"
+/home/shiv
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${PATH}"     
+/home/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${PATH/home/users}"
+/users/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${PATH}"           
+/home/shivam1/.local/bin:/home/shivam1/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/shivam1/.dotnet/tools:/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo "${PATH//:/\n}"
+/home/shivam1/.local/bin
+/home/shivam1/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "${PATH//:/\n}"
+/home/shivam1/.local/bin
+/home/shivam1/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/shivam1/.dotnet/tools
+/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "${PATH//:/$(tput setaf 4)}"
+/home/shivam1/.local/bin/home/shivam1/bin/usr/local/sbin/usr/sbin/sbin/usr/local/bin/usr/bin/bin/usr/local/games/usr/games/snap/bin/home/shivam1/.dotnet/tools/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "${PATH//:/$(tput setaf 3)}"
+/home/shivam1/.local/bin/home/shivam1/bin/usr/local/sbin/usr/sbin/sbin/usr/local/bin/usr/bin/bin/usr/local/games/usr/games/snap/bin/home/shivam1/.dotnet/tools/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "${PATH//:/$(tput setaf 2)}"
+/home/shivam1/.local/bin/home/shivam1/bin/usr/local/sbin/usr/sbin/sbin/usr/local/bin/usr/bin/bin/usr/local/games/usr/games/snap/bin/home/shivam1/.dotnet/tools/home/shivam1/Linux/genymotion
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ script my_zsh_session.log
+Script started, output log file is 'my_zsh_session.log'.
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ $HOME   
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ nano ~/.zshrc  
+
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ exit
+Script done.
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+abc.txt  a.docs  b.txt               ram.csv   ram.txt
+a.csv    a.txt   my_zsh_session.log  ram.pptx
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ less my_zsh_session.log
+"my_zsh_session.log" may be a binary file.  See it anyway? 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ less my_zsh_session.log
+"my_zsh_session.log" may be a binary file.  See it anyway? 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ less -R my_zsh_session.log
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ less -R my_zsh_session.log
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ less -R my_zsh_session.log
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "$(cat my_zsh_session.log)"
+Script started on 2025-08-03 14:08:49+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="71" LINES="19"]
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ $HOME   
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ nano ~/.zshrc  
+
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ exit
+
+Script done on 2025-08-03 14:09:16+05:30 [COMMAND_EXIT_CODE="0"]
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo -e "$(cat my_zsh_session.log)"
+Script started on 2025-08-03 14:08:49+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="71" LINES="19"]
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ $HOME   
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ nano ~/.zshrc  
+
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ exit
+
+Script done on 2025-08-03 14:09:16+05:30 [COMMAND_EXIT_CODE="0"]
+                                                                       
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ 
