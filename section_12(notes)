@@ -621,4 +621,113 @@ hello world
 ┌──(shivam1㉿Venom)-[~]
 └─$ 
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------COMMON PITFALLS IN SHELL EXPANSIONS ----------------------------------------------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+abc.txt  a.docs  b.txt               ram.csv   ram.txt
+a.csv    a.txt   my_zsh_session.log  ram.pptx
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ touch echo
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+abc.txt  a.docs  b.txt  my_zsh_session.log  ram.pptx
+a.csv    a.txt   echo   ram.csv             ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo *
+abc.txt a.csv a.docs a.txt b.txt echo my_zsh_session.log ram.csv ram.pptx ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ *
+abc.txt: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ rm abc.txt a.csv a.docs a.txt b.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+echo  my_zsh_session.log  ram.csv  ram.pptx  ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ echo *
+echo my_zsh_session.log ram.csv ram.pptx ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ *
+my_zsh_session.log ram.csv ram.pptx ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+echo  my_zsh_session.log  ram.csv  ram.pptx  ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ touch '-al'
+touch: invalid option -- 'l'
+Try 'touch --help' for more information.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ touch -al
+touch: invalid option -- 'l'
+Try 'touch --help' for more information.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ touch ./-al
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+-al  echo  my_zsh_session.log  ram.csv  ram.pptx  ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls *
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  4 10:48 echo
+-rw-rw-r-- 1 shivam1 shivam1 3306 Aug  3 14:09 my_zsh_session.log
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.csv
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.pptx
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls -al echo my_zsh_session.log ram.csv ram.pptx ram.txt
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  4 10:48 echo
+-rw-rw-r-- 1 shivam1 shivam1 3306 Aug  3 14:09 my_zsh_session.log
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.csv
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.pptx
+-rw-rw-r-- 1 shivam1 shivam1    0 Aug  2 23:46 ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls ./*
+./-al  ./echo  ./my_zsh_session.log  ./ram.csv  ./ram.pptx  ./ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ mkdir 'a folder'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ ls
+'a folder'   -al   echo   my_zsh_session.log   ram.csv   ram.pptx   ram.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
+└─$ cd a\ folder 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch $PWD/file.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+file.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo $PWD/file.txt
+/home/shivam1/Linux/assignment/s12/a folder/file.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch "${PWD}/file2.txt"
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+file2.txt  file.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ 
+---------------------------------------------------------------------------
