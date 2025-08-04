@@ -793,4 +793,307 @@ single quote: '
                                                                                 
 ┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
 └─$ 
---------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------BRACE EXPANSION IN BASH ---------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo data.{csv,txt}
+data.csv data.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'data.'{txt,csv}
+data.txt data.csv
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ bash --version
+GNU bash, version 5.2.37(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo {A..Z}
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo {a..z}
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo {1..10}
+1 2 3 4 5 6 7 8 9 10
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch {a..z}.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+a.txt  d.txt  g.txt  j.txt  m.txt  p.txt  s.txt  v.txt  y.txt
+b.txt  e.txt  h.txt  k.txt  n.txt  q.txt  t.txt  w.txt  z.txt
+c.txt  f.txt  i.txt  l.txt  o.txt  r.txt  u.txt  x.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch 'test'{.txt, .csv}
+zsh: parse error near `}'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch report.{pdf,docx,txt}
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+a.txt  d.txt  g.txt  j.txt  m.txt  p.txt        report.pdf  s.txt  v.txt  y.txt
+b.txt  e.txt  h.txt  k.txt  n.txt  q.txt        report.txt  t.txt  w.txt  z.txt
+c.txt  f.txt  i.txt  l.txt  o.txt  report.docx  r.txt       u.txt  x.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm ./*.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+report.docx  report.pdf
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch report.{pdf,docx,txt,pptx,csv}
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+report.csv  report.docx  report.pdf  report.pptx  report.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm ./report.*
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch backup{1..100}.tar  
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+backup100.tar  backup28.tar  backup46.tar  backup64.tar  backup82.tar
+backup10.tar   backup29.tar  backup47.tar  backup65.tar  backup83.tar
+backup11.tar   backup2.tar   backup48.tar  backup66.tar  backup84.tar
+backup12.tar   backup30.tar  backup49.tar  backup67.tar  backup85.tar
+backup13.tar   backup31.tar  backup4.tar   backup68.tar  backup86.tar
+backup14.tar   backup32.tar  backup50.tar  backup69.tar  backup87.tar
+backup15.tar   backup33.tar  backup51.tar  backup6.tar   backup88.tar
+backup16.tar   backup34.tar  backup52.tar  backup70.tar  backup89.tar
+backup17.tar   backup35.tar  backup53.tar  backup71.tar  backup8.tar
+backup18.tar   backup36.tar  backup54.tar  backup72.tar  backup90.tar
+backup19.tar   backup37.tar  backup55.tar  backup73.tar  backup91.tar
+backup1.tar    backup38.tar  backup56.tar  backup74.tar  backup92.tar
+backup20.tar   backup39.tar  backup57.tar  backup75.tar  backup93.tar
+backup21.tar   backup3.tar   backup58.tar  backup76.tar  backup94.tar
+backup22.tar   backup40.tar  backup59.tar  backup77.tar  backup95.tar
+backup23.tar   backup41.tar  backup5.tar   backup78.tar  backup96.tar
+backup24.tar   backup42.tar  backup60.tar  backup79.tar  backup97.tar
+backup25.tar   backup43.tar  backup61.tar  backup7.tar   backup98.tar
+backup26.tar   backup44.tar  backup62.tar  backup80.tar  backup99.tar
+backup27.tar   backup45.tar  backup63.tar  backup81.tar  backup9.tar
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ for letter in {a..d}; do echo "Letter: $letter"; done  
+Letter: a
+Letter: b
+Letter: c
+Letter: d
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ 
+-------------------------------------------------------------------------COMMAND SUBSTITUTTION LEC 124--------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "My current working directory is $(pwd)"
+My current working directory is /home/shivam1/Linux/assignment/s12/a folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "My current working directory is $(PWD)"
+PWD: command not found
+My current working directory is 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "My current working directory is ${PWD}"
+My current working directory is /home/shivam1/Linux/assignment/s12/a folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "My PREV working directory is ${OLDPWD}"
+My PREV working directory is /home/shivam1/Linux/assignment/s12
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "My PREV working directory is $(oldpwd)"
+oldpwd: command not found
+My PREV working directory is 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo $(pwd)/cs.txt
+/home/shivam1/Linux/assignment/s12/a folder/cs.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch $(pwd)/cs.xtx
+touch: cannot touch 'folder/cs.xtx': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch $(pwd)/cs.txt
+touch: cannot touch 'folder/cs.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch "$(pwd)/cs2.txt"
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+backup100.tar  backup29.tar  backup48.tar  backup67.tar  backup86.tar
+backup10.tar   backup2.tar   backup49.tar  backup68.tar  backup87.tar
+backup11.tar   backup30.tar  backup4.tar   backup69.tar  backup88.tar
+backup12.tar   backup31.tar  backup50.tar  backup6.tar   backup89.tar
+backup13.tar   backup32.tar  backup51.tar  backup70.tar  backup8.tar
+backup14.tar   backup33.tar  backup52.tar  backup71.tar  backup90.tar
+backup15.tar   backup34.tar  backup53.tar  backup72.tar  backup91.tar
+backup16.tar   backup35.tar  backup54.tar  backup73.tar  backup92.tar
+backup17.tar   backup36.tar  backup55.tar  backup74.tar  backup93.tar
+backup18.tar   backup37.tar  backup56.tar  backup75.tar  backup94.tar
+backup19.tar   backup38.tar  backup57.tar  backup76.tar  backup95.tar
+backup1.tar    backup39.tar  backup58.tar  backup77.tar  backup96.tar
+backup20.tar   backup3.tar   backup59.tar  backup78.tar  backup97.tar
+backup21.tar   backup40.tar  backup5.tar   backup79.tar  backup98.tar
+backup22.tar   backup41.tar  backup60.tar  backup7.tar   backup99.tar
+backup23.tar   backup42.tar  backup61.tar  backup80.tar  backup9.tar
+backup24.tar   backup43.tar  backup62.tar  backup81.tar  cs2.txt
+backup25.tar   backup44.tar  backup63.tar  backup82.tar
+backup26.tar   backup45.tar  backup64.tar  backup83.tar
+backup27.tar   backup46.tar  backup65.tar  backup84.tar
+backup28.tar   backup47.tar  backup66.tar  backup85.tar
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm ./*.tar
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'The size of my home directory is: ' "$(du -sh ~)" '
+quote> 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'The size of my home directory is: ' "$(du -sh ~)"   
+The size of my home directory is:  15G	/home/shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'ram ' "loves syam"
+ram  loves syam
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There '"'"'re ' $(ls | wc -l ) 
+ There 're  1
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There '"'"'re ' $(ls | wc -l ) "files in the current folder"
+ There 're  1 files in the current folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There '"'s"'are ' $(ls | wc -l ) "files in the current folder"
+ There 'sare  1 files in the current folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There'"'s"' are ' $(ls | wc -l ) "files in the current folder"
+ There's are  1 files in the current folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch demo.{1..3}_files.{txt,docs}
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt            demo.1_files.txt   demo.2_files.txt   demo.3_files.txt
+demo.1_files.docs  demo.2_files.docs  demo.3_files.docs
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm demo.{1..3}_files.{txt,docs}
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm demo{1..3}_files.{txt,docs} 
+rm: cannot remove 'demo1_files.txt': No such file or directory
+rm: cannot remove 'demo1_files.docs': No such file or directory
+rm: cannot remove 'demo2_files.txt': No such file or directory
+rm: cannot remove 'demo2_files.docs': No such file or directory
+rm: cannot remove 'demo3_files.txt': No such file or directory
+rm: cannot remove 'demo3_files.docs': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch demo{1..3}_files.{txt,docs} 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt           demo1_files.txt   demo2_files.txt   demo3_files.txt
+demo1_files.docs  demo2_files.docs  demo3_files.docs
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm demo{1..3}_files.{txt,docs}   
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ rm demo{1..3}_file.{txt,docs} 
+rm: cannot remove 'demo1_file.txt': No such file or directory
+rm: cannot remove 'demo1_file.docs': No such file or directory
+rm: cannot remove 'demo2_file.txt': No such file or directory
+rm: cannot remove 'demo2_file.docs': No such file or directory
+rm: cannot remove 'demo3_file.txt': No such file or directory
+rm: cannot remove 'demo3_file.docs': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ touch demo{1..3}_file.{txt,docs}
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There'"'s"' are ' $(ls | wc -l ) "files in the current folder"
+ There's are  7 files in the current folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ ls
+cs2.txt          demo1_file.txt   demo2_file.txt   demo3_file.txt
+demo1_file.docs  demo2_file.docs  demo3_file.docs
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' There'"'s"' are ' "$(ls | wc -l )" 'files in the current folder'
+ There's are  7 files in the current folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "`ls`"         
+cs2.txt
+demo1_file.docs
+demo1_file.txt
+demo2_file.docs
+demo2_file.txt
+demo3_file.docs
+demo3_file.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "${ls}"
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "$(ls | ~ )"
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "$(ls |  )" 
+zsh: parse error near `)'
+zsh: unmatched "
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "$(ls | ${PWD} )"
+
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "$(ls | ${PWD} )"  
+---------------------------------------------------------------------------------------------------------------------------
