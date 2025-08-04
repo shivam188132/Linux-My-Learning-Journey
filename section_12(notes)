@@ -730,4 +730,67 @@ file2.txt  file.txt
                                                                                 
 ┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
 └─$ 
----------------------------------------------------------------------------
+--------------------------------------------------------------------------- QUOTING IN BASH -------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "\"" 
+"
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' " '
+ " 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo ' \" '
+ \" 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo \'
+'
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo " ' "
+ ' 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "She said, \"Hi\" "
+She said, "Hi" 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'It\' broken'  
+quote> 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'It'" '"'s fine' 
+It 's fine
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'It'"'"'s fine'  
+It's fine
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "Hello \n Shivam"
+Hello 
+ Shivam
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "Hello \nShivam" 
+Hello 
+Shivam
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'Hello \nShivam'
+Hello 
+Shivam
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo "Cost: \$5"
+Cost: $5
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ echo 'single quote: '"'"
+single quote: '
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/assignment/s12/a folder]
+└─$ 
+--------------------------------------------------------------------------------------------------------------------------------------
