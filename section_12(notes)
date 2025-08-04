@@ -587,3 +587,38 @@ Script done on 2025-08-03 14:09:16+05:30 [COMMAND_EXIT_CODE="0"]
                                                                        
 ┌──(shivam1㉿Venom)-[~/Linux/assignment/s12]
 └─$ 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~]
+└─$ "echo" 
+
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ "echo" 'world'
+world
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 'hye'
+Command 'hye' not found, did you mean:
+  command 'hey' from deb hey
+  command 'hyx' from deb hyx
+  command 'hte' from deb ht
+  command 'he' from deb node-he
+  command 'hy3' from deb hy
+Try: sudo apt install <deb name>
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ "hello world"
+hello world: command not found
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 'echo' "hello"
+hello
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ echo "hello" 'world'
+hello world
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
