@@ -1,0 +1,537 @@
+┌──(shivam1㉿Venom)-[~]
+└─$ ls 
+ bin         Documents   Music      safe_folder   Templates        vscode
+ c++         Downloads   Pictures   sample        testing.txt
+ demo2.txt   grep        Public     scrcpy        Videos
+ Desktop     Linux       resume     shibu        'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cd sample
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ls
+opera-stable_120.0.5543.161_amd64.deb
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/Linux/CompanyShare/demo.txt
+ln: failed to access 'file.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ touch file.txt                           
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/inux/CompanyShare/demo.txt 
+ln: failed to create hard link '/home/shivam1/inux/CompanyShare/demo.txt' => 'file.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/Linux/CompanyShare/demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ cd ~/Linux/CompanyShare 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ ls
+demo.txt  Export  Purchasing  Sales
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ nano demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ cat ~/sample/file.txt 
+Hi i am shivam in Linux folder.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+┌──(shivam1㉿Venom)-[~]
+└─$ ls 
+ bin         Documents   Music      safe_folder   Templates        vscode
+ c++         Downloads   Pictures   sample        testing.txt
+ demo2.txt   grep        Public     scrcpy        Videos
+ Desktop     Linux       resume     shibu        'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cd sample
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ls
+opera-stable_120.0.5543.161_amd64.deb
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/Linux/CompanyShare/demo.txt
+ln: failed to access 'file.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ touch file.txt                           
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/inux/CompanyShare/demo.txt 
+ln: failed to create hard link '/home/shivam1/inux/CompanyShare/demo.txt' => 'file.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ln file.txt ~/Linux/CompanyShare/demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ cd ~/Linux/CompanyShare 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ ls
+demo.txt  Export  Purchasing  Sales
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ nano demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ cat ~/sample/file.txt 
+Hi i am shivam in Linux folder.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ ls 
+demo.txt  Export  Purchasing  Sales
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ mkdir date
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ mkdir date/day       
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ cd .. ; mv demo.txt ~/Linux/CompanyShare/date/day/demo.txt
+mv: cannot stat 'demo.txt': No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cd ~/Linux/CompanyShare ; mv demo.txt ~/Linux/CompanyShare/date/day/demo.txt 
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare]
+└─$ cd date
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date]
+└─$ ls
+day
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date]
+└─$ cd day
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date/day]
+└─$ ls
+demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date/day]
+└─$ cat demo.txt
+Hi i am shivam in Linux folder.
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date/day]
+└─$ nano demo.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux/CompanyShare/date/day]
+└─$ cd ~        
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Documents   Music      safe_folder   Templates        vscode
+ c++         Downloads   Pictures   sample        testing.txt
+ demo2.txt   grep        Public     scrcpy        Videos
+ Desktop     Linux       resume     shibu        'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat ~/sample/file.txt 
+Hi i am shivam in Linux folder.
+Now i moved to a differnet folder and modified the content.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+------------------------------------------------------------CREATING AND MANAGING INODES USAGE----------------------------------------------------------
+┌──(shivam1㉿Venom)-[~]
+└─$ df -ih
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+udev             1.9M   625  1.9M    1% /dev
+tmpfs            1.9M  1.2K  1.9M    1% /run
+/dev/nvme0n1p5   6.9M  806K  6.2M   12% /
+tmpfs            1.9M   807  1.9M    1% /dev/shm
+efivarfs            0     0     0     - /sys/firmware/efi/efivars
+tmpfs            1.9M     2  1.9M    1% /run/lock
+tmpfs            1.0K     1  1023    1% /run/credentials/systemd-journald.service
+tmpfs            1.0M    53  1.0M    1% /tmp
+/dev/nvme0n1p9   2.4M    12  2.4M    1% /media/data
+/dev/nvme0n1p4      0     0     0     - /boot/efi
+tmpfs            385K   188  385K    1% /run/user/1000
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Documents   Music      safe_folder   Templates        vscode
+ c++         Downloads   Pictures   sample        testing.txt
+ demo2.txt   grep        Public     scrcpy        Videos
+ Desktop     Linux       resume     shibu        'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cd sample
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ls
+file.txt  opera-stable_120.0.5543.161_amd64.deb
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ mkdir demo-folder
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ls
+demo-folder  file.txt  opera-stable_120.0.5543.161_amd64.deb
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ cd demo-folder 
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ ls
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ echo "I am a hard link test" > original.txt  
+ln original.txt linked.txt
+ls -li original.txt linked.txt  # Check matching inodes!
+2103442 -rw-rw-r-- 2 shivam1 shivam1 22 Aug 19 15:00 linked.txt
+2103442 -rw-rw-r-- 2 shivam1 shivam1 22 Aug 19 15:00 original.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ ls
+linked.txt  original.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ ls -la > test.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ ls
+linked.txt  original.txt  test.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ ls -li test.txt
+2104053 -rw-rw-r-- 1 shivam1 shivam1 282 Aug 19 15:01 test.txt
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample/demo-folder]
+└─$ 
+--------------------------------------------------------BUFFERED VS UNBUFFERED INPUT VS OUTPUT DEVICES---------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ sudo cat /dev/input/mice 
+[sudo] password for shivam1: 
+8��(�(�(�(�(�(�(�(�(�(�������������������������������������������������8����8���8��8��8��8��(�(�(�(�(�(����8��8��8��8��8��8��8��8��8��8�8��8��8��8��8��8��8��8��8��8��88��8��8��8��8��8��8��8��8��8���8��8��8��8��8����8��8��8��8��8��8��8��8��8���8��8��8��8��8��8��8��8��8��8�8��8��8��8��8��8��8��8��88��8��8��8��8��8��8��8�����8���8��8��8��8��8��8��8��8��8��8��8��8���8��8��8���8��8��8��8���8���8����8���8��8���8����8���8���8��8���8��8��8���8��8���8��8��8��8��8��8��8��8��8��8��8��8����8�(�((�(�(�((�^C(�(�(�((�(�(�(�(�(�(�(�(�8��8��(�8��8��8���8��(��(��(��
+                             
+------------------------------------------------------------BUFFERED FLUSHING AND OBSERVINGS ------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~]
+└─$ sync
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Documents   Music      safe_folder   Templates        vscode
+ c++         Downloads   Pictures   sample        testing.txt
+ demo2.txt   grep        Public     scrcpy        Videos
+ Desktop     Linux       resume     shibu        'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cd sample
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ ls
+demo-folder  file.txt  opera-stable_120.0.5543.161_amd64.deb
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ strace        
+Command 'strace' not found, but can be installed with:
+sudo apt install strace
+Do you want to install it? (N/y)y
+sudo apt install strace
+[sudo] password for shivam1: 
+Installing:                     
+  strace
+
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 339
+  Download size: 1,423 kB
+  Space needed: 3,146 kB / 73.1 GB available
+
+Get:1 http://http.kali.org/kali kali-rolling/main amd64 strace amd64 6.13+ds-1 [1,423 kB]
+Fetched 1,423 kB in 9s (161 kB/s)                                              
+Selecting previously unselected package strace.
+(Reading database ... 496729 files and directories currently installed.)
+Preparing to unpack .../strace_6.13+ds-1_amd64.deb ...
+Unpacking strace (6.13+ds-1) ...
+Setting up strace (6.13+ds-1) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for kali-menu (2025.3.0) ...
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ strace cat file.txt 
+execve("/usr/bin/cat", ["cat", "file.txt"], 0x7ffcc30db978 /* 57 vars */) = 0
+brk(NULL)                               = 0x55f8654e7000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f14a1cd3000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=99038, ...}) = 0
+mmap(NULL, 99038, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f14a1cba000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\236\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0755, st_size=2003408, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2055800, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f14a1ac4000
+mmap(0x7f14a1aec000, 1462272, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f14a1aec000
+mmap(0x7f14a1c51000, 352256, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18d000) = 0x7f14a1c51000
+mmap(0x7f14a1ca7000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e2000) = 0x7f14a1ca7000
+mmap(0x7f14a1cad000, 52856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f14a1cad000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f14a1ac1000
+arch_prctl(ARCH_SET_FS, 0x7f14a1ac1740) = 0
+set_tid_address(0x7f14a1ac1a10)         = 34725
+set_robust_list(0x7f14a1ac1a20, 24)     = 0
+rseq(0x7f14a1ac1680, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f14a1ca7000, 16384, PROT_READ) = 0
+mprotect(0x55f846e98000, 4096, PROT_READ) = 0
+mprotect(0x7f14a1d0f000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f14a1cba000, 99038)           = 0
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3063216, ...}) = 0
+mmap(NULL, 3063216, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f14a1600000
+close(3)                                = 0
+getrandom("\xf1\xac\xea\xb7\x32\x00\x2c\x63", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55f8654e7000
+brk(0x55f865508000)                     = 0x55f865508000
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0), ...}) = 0
+openat(AT_FDCWD, "file.txt", O_RDONLY)  = 3
+fstat(3, {st_mode=S_IFREG|0664, st_size=108, ...}) = 0
+fadvise64(3, 0, 0, POSIX_FADV_SEQUENTIAL) = 0
+mmap(NULL, 270336, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f14a1a7f000
+read(3, "Hi i am shivam in Linux folder.\n"..., 262144) = 108
+write(1, "Hi i am shivam in Linux folder.\n"..., 108Hi i am shivam in Linux folder.
+Now i moved to a differnet folder and modified the content.
+testing via gnu
+) = 108
+read(3, "", 262144)                     = 0
+munmap(0x7f14a1a7f000, 270336)          = 0
+close(3)                                = 0
+close(1)                                = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+                                                                                
+┌──(shivam1㉿Venom)-[~/sample]
+└─$ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev/disk]
+└─$ ls
+by-diskseq  by-id  by-label  by-partlabel  by-partuuid  by-path  by-uuid
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev/disk]
+└─$ cd ..
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev]
+└─$ ls
+autofs           cuse         gpiochip0  hugepages    input         mqueue     nvme0n1p4  psaux   snapshot  tty1   tty18  tty26  tty34  tty42  tty50  tty59  ttyS0        v4l   vcsa1  vcsu3        video0
+block            disk         hidraw0    hwrng        kfd           net        nvme0n1p5  ptmx    snd       tty10  tty19  tty27  tty35  tty43  tty51  tty6   ttyS1        vcs   vcsa2  vcsu4        video1
+btrfs-control    dma_heap     hidraw1    iio:device0  kmsg          ng0n1      nvme0n1p6  ptp0    stderr    tty11  tty2   tty28  tty36  tty44  tty52  tty60  ttyS2        vcs1  vcsa3  vcsu5        watchdog
+bus              dri          hidraw2    iio:device1  kvm           null       nvme0n1p7  pts     stdin     tty12  tty20  tty29  tty37  tty45  tty53  tty61  ttyS3        vcs2  vcsa4  vcsu6        watchdog0
+char             drm_dp_aux0  hidraw3    iio:device2  log           nvme0      nvme0n1p8  random  stdout    tty13  tty21  tty3   tty38  tty46  tty54  tty62  udmabuf      vcs3  vcsa5  vfio         zero
+console          fb0          hidraw4    iio:device3  loop-control  nvme0n1    nvme0n1p9  rfkill  tpm0      tty14  tty22  tty30  tty39  tty47  tty55  tty63  uhid         vcs4  vcsa6  vga_arbiter
+core             fd           hidraw5    iio:device4  mapper        nvme0n1p1  nvram      rtc     tpmrm0    tty15  tty23  tty31  tty4   tty48  tty56  tty7   uinput       vcs5  vcsu   vhci
+cpu              full         hidraw6    iio:device5  media0        nvme0n1p2  port       rtc0    tty       tty16  tty24  tty32  tty40  tty49  tty57  tty8   urandom      vcs6  vcsu1  vhost-net
+cpu_dma_latency  fuse         hpet       initctl      mem           nvme0n1p3  ppp        shm     tty0      tty17  tty25  tty33  tty41  tty5   tty58  tty9   userfaultfd  vcsa  vcsu2  vhost-vsock
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev]
+└─$ cd nvme0n1p5
+cd: not a directory: nvme0n1p5
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev]
+└─$ ls -l
+total 0
+crw-r--r--   1 root    root     10,   235 Aug 20 10:03 autofs
+drwxr-xr-x   2 root    root           240 Aug 20 10:22 block
+crw-------   1 root    root     10,   234 Aug 20 10:03 btrfs-control
+drwxr-xr-x   3 root    root            60 Aug 20 10:03 bus
+drwxr-xr-x   2 root    root          4080 Aug 20 11:29 char
+crw-------   1 root    root      5,     1 Aug 20 10:03 console
+lrwxrwxrwx   1 root    root            11 Aug 20 10:03 core -> /proc/kcore
+drwxr-xr-x  14 root    root           280 Aug 20 10:03 cpu
+crw-------   1 root    root     10,   124 Aug 20 10:03 cpu_dma_latency
+crw-------   1 root    root     10,   203 Aug 20 10:03 cuse
+drwxr-xr-x   9 root    root           180 Aug 20 10:03 disk
+drwxr-xr-x   2 root    root            60 Aug 20 10:03 dma_heap
+drwxr-xr-x   3 root    root           140 Aug 20 10:03 dri
+crw-------   1 root    root    239,     0 Aug 20 10:03 drm_dp_aux0
+crw-rw----   1 root    video    29,     0 Aug 20 10:03 fb0
+lrwxrwxrwx   1 root    root            13 Aug 20 10:03 fd -> /proc/self/fd
+crw-rw-rw-   1 root    root      1,     7 Aug 20 10:03 full
+crw-rw-rw-   1 root    root     10,   229 Aug 20 10:03 fuse
+crw-------   1 root    root    254,     0 Aug 20 10:03 gpiochip0
+crw-------   1 root    root    245,     0 Aug 20 10:03 hidraw0
+crw-------   1 root    root    245,     1 Aug 20 10:03 hidraw1
+crw-------   1 root    root    245,     2 Aug 20 10:03 hidraw2
+crw-------   1 root    root    245,     3 Aug 20 10:03 hidraw3
+crw-------   1 root    root    245,     4 Aug 20 10:03 hidraw4
+crw-------   1 root    root    245,     5 Aug 20 10:03 hidraw5
+crw-------   1 root    root    245,     6 Aug 20 10:03 hidraw6
+crw-------   1 root    root     10,   228 Aug 20 10:03 hpet
+drwxr-xr-x   2 root    root             0 Aug 20 10:03 hugepages
+crw-------   1 root    root     10,   183 Aug 20 10:03 hwrng
+crw-------   1 root    root    237,     0 Aug 20 10:03 iio:device0
+crw-------   1 root    root    237,     1 Aug 20 10:03 iio:device1
+crw-------   1 root    root    237,     2 Aug 20 10:03 iio:device2
+crw-------   1 root    root    237,     3 Aug 20 10:03 iio:device3
+crw-------   1 root    root    237,     4 Aug 20 10:03 iio:device4
+crw-------   1 root    root    237,     5 Aug 20 10:03 iio:device5
+lrwxrwxrwx   1 root    root            12 Aug 20 10:03 initctl -> /run/initctl
+drwxr-xr-x   3 root    root           480 Aug 20 10:31 input
+crw-rw----   1 root    render  238,     0 Aug 20 10:03 kfd
+crw-r--r--   1 root    root      1,    11 Aug 20 10:03 kmsg
+crw-rw----+  1 root    kvm      10,   232 Aug 20 10:03 kvm
+lrwxrwxrwx   1 root    root            28 Aug 20 10:03 log -> /run/systemd/journal/dev-log
+crw-rw----   1 root    disk     10,   237 Aug 20 10:03 loop-control
+drwxr-xr-x   2 root    root            60 Aug 20 10:03 mapper
+crw-rw----+  1 root    video   236,     0 Aug 20 10:03 media0
+crw-r-----   1 root    kmem      1,     1 Aug 20 10:03 mem
+drwxrwxrwt   2 root    root            40 Aug 20 10:03 mqueue
+drwxr-xr-x   2 root    root            60 Aug 20 10:03 net
+crw-------   1 root    root    243,     0 Aug 20 10:03 ng0n1
+crw-rw-rw-   1 root    root      1,     3 Aug 20 10:03 null
+crw-------   1 root    root    244,     0 Aug 20 10:10 nvme0
+brw-rw----   1 root    disk    259,     0 Aug 20 10:03 nvme0n1
+brw-rw----   1 root    disk    259,     1 Aug 20 10:22 nvme0n1p1
+brw-rw----   1 root    disk    259,     2 Aug 20 10:22 nvme0n1p2
+brw-rw----   1 root    disk    259,     3 Aug 20 10:22 nvme0n1p3
+brw-rw----   1 root    disk    259,     4 Aug 20 10:22 nvme0n1p4
+brw-rw----   1 root    disk    259,     5 Aug 20 10:22 nvme0n1p5
+brw-rw----   1 root    disk    259,     6 Aug 20 10:22 nvme0n1p6
+brw-rw----   1 root    disk    259,     7 Aug 20 10:22 nvme0n1p7
+brw-rw----   1 root    disk    259,     8 Aug 20 10:22 nvme0n1p8
+brw-rw----   1 root    disk    259,     9 Aug 20 10:22 nvme0n1p9
+crw-------   1 root    root     10,   144 Aug 20 10:03 nvram
+crw-r-----   1 root    kmem      1,     4 Aug 20 10:03 port
+crw-------   1 root    root    108,     0 Aug 20 10:03 ppp
+crw-------   1 root    root     10,     1 Aug 20 10:03 psaux
+crw-rw-rw-   1 root    tty       5,     2 Aug 20 11:30 ptmx
+crw-------   1 root    root    247,     0 Aug 20 10:03 ptp0
+drwxr-xr-x   2 root    root             0 Aug 20 10:03 pts
+crw-rw-rw-   1 root    root      1,     8 Aug 20 10:03 random
+crw-rw-r--+  1 root    netdev   10,   242 Aug 20 10:03 rfkill
+lrwxrwxrwx   1 root    root             4 Aug 20 10:03 rtc -> rtc0
+crw-------   1 root    root    249,     0 Aug 20 10:03 rtc0
+drwxrwxrwt   2 root    root            60 Aug 20 11:29 shm
+crw-------   1 root    root     10,   231 Aug 20 10:03 snapshot
+drwxr-xr-x   3 root    root           400 Aug 20 10:03 snd
+lrwxrwxrwx   1 root    root            15 Aug 20 10:03 stderr -> /proc/self/fd/2
+lrwxrwxrwx   1 root    root            15 Aug 20 10:03 stdin -> /proc/self/fd/0
+lrwxrwxrwx   1 root    root            15 Aug 20 10:03 stdout -> /proc/self/fd/1
+crw-rw----   1 tss     root     10,   224 Aug 20 10:03 tpm0
+crw-rw----   1 tss     tss     253, 65536 Aug 20 10:03 tpmrm0
+crw-rw-rw-   1 root    tty       5,     0 Aug 20 11:17 tty
+crw-------   1 root    tty       4,     0 Aug 20 10:03 tty0
+crw-------   1 root    tty       4,     1 Aug 20 10:03 tty1
+crw-------   1 root    tty       4,    10 Aug 20 10:03 tty10
+crw-------   1 root    tty       4,    11 Aug 20 10:03 tty11
+crw-------   1 root    tty       4,    12 Aug 20 10:03 tty12
+crw-------   1 root    tty       4,    13 Aug 20 10:03 tty13
+crw-------   1 root    tty       4,    14 Aug 20 10:03 tty14
+crw-------   1 root    tty       4,    15 Aug 20 10:03 tty15
+crw-------   1 root    tty       4,    16 Aug 20 10:03 tty16
+crw-------   1 root    tty       4,    17 Aug 20 10:03 tty17
+crw-------   1 root    tty       4,    18 Aug 20 10:03 tty18
+crw-------   1 root    tty       4,    19 Aug 20 10:03 tty19
+crw-------   1 shivam1 tty       4,     2 Aug 20 10:03 tty2
+crw-------   1 root    tty       4,    20 Aug 20 10:03 tty20
+crw-------   1 root    tty       4,    21 Aug 20 10:03 tty21
+crw-------   1 root    tty       4,    22 Aug 20 10:03 tty22
+crw-------   1 root    tty       4,    23 Aug 20 10:03 tty23
+crw-------   1 root    tty       4,    24 Aug 20 10:03 tty24
+crw-------   1 root    tty       4,    25 Aug 20 10:03 tty25
+crw-------   1 root    tty       4,    26 Aug 20 10:03 tty26
+crw-------   1 root    tty       4,    27 Aug 20 10:03 tty27
+crw-------   1 root    tty       4,    28 Aug 20 10:03 tty28
+crw-------   1 root    tty       4,    29 Aug 20 10:03 tty29
+crw-------   1 root    tty       4,     3 Aug 20 10:03 tty3
+crw-------   1 root    tty       4,    30 Aug 20 10:03 tty30
+crw-------   1 root    tty       4,    31 Aug 20 10:03 tty31
+crw-------   1 root    tty       4,    32 Aug 20 10:03 tty32
+crw-------   1 root    tty       4,    33 Aug 20 10:03 tty33
+crw-------   1 root    tty       4,    34 Aug 20 10:03 tty34
+crw-------   1 root    tty       4,    35 Aug 20 10:03 tty35
+crw-------   1 root    tty       4,    36 Aug 20 10:03 tty36
+crw-------   1 root    tty       4,    37 Aug 20 10:03 tty37
+crw-------   1 root    tty       4,    38 Aug 20 10:03 tty38
+crw-------   1 root    tty       4,    39 Aug 20 10:03 tty39
+crw-------   1 root    tty       4,     4 Aug 20 10:03 tty4
+crw-------   1 root    tty       4,    40 Aug 20 10:03 tty40
+crw-------   1 root    tty       4,    41 Aug 20 10:03 tty41
+crw-------   1 root    tty       4,    42 Aug 20 10:03 tty42
+crw-------   1 root    tty       4,    43 Aug 20 10:03 tty43
+crw-------   1 root    tty       4,    44 Aug 20 10:03 tty44
+crw-------   1 root    tty       4,    45 Aug 20 10:03 tty45
+crw-------   1 root    tty       4,    46 Aug 20 10:03 tty46
+crw-------   1 root    tty       4,    47 Aug 20 10:03 tty47
+crw-------   1 root    tty       4,    48 Aug 20 10:03 tty48
+crw-------   1 root    tty       4,    49 Aug 20 10:03 tty49
+crw-------   1 root    tty       4,     5 Aug 20 10:03 tty5
+crw-------   1 root    tty       4,    50 Aug 20 10:03 tty50
+crw-------   1 root    tty       4,    51 Aug 20 10:03 tty51
+crw-------   1 root    tty       4,    52 Aug 20 10:03 tty52
+crw-------   1 root    tty       4,    53 Aug 20 10:03 tty53
+crw-------   1 root    tty       4,    54 Aug 20 10:03 tty54
+crw-------   1 root    tty       4,    55 Aug 20 10:03 tty55
+crw-------   1 root    tty       4,    56 Aug 20 10:03 tty56
+crw-------   1 root    tty       4,    57 Aug 20 10:03 tty57
+crw-------   1 root    tty       4,    58 Aug 20 10:03 tty58
+crw-------   1 root    tty       4,    59 Aug 20 10:03 tty59
+crw-------   1 root    tty       4,     6 Aug 20 10:03 tty6
+crw-------   1 root    tty       4,    60 Aug 20 10:03 tty60
+crw-------   1 root    tty       4,    61 Aug 20 10:03 tty61
+crw-------   1 root    tty       4,    62 Aug 20 10:03 tty62
+crw-------   1 root    tty       4,    63 Aug 20 10:03 tty63
+crw-------   1 root    tty       4,     7 Aug 20 10:03 tty7
+crw-------   1 root    tty       4,     8 Aug 20 10:03 tty8
+crw-------   1 root    tty       4,     9 Aug 20 10:03 tty9
+crw-rw----   1 root    dialout   4,    64 Aug 20 10:03 ttyS0
+crw-rw----   1 root    dialout   4,    65 Aug 20 10:03 ttyS1
+crw-rw----   1 root    dialout   4,    66 Aug 20 10:03 ttyS2
+crw-rw----   1 root    dialout   4,    67 Aug 20 10:03 ttyS3
+crw-rw----+  1 root    kvm      10,   125 Aug 20 10:03 udmabuf
+crw-------   1 root    root     10,   239 Aug 20 10:03 uhid
+crw-------   1 root    root     10,   223 Aug 20 10:13 uinput
+crw-rw-rw-   1 root    root      1,     9 Aug 20 10:03 urandom
+crw-------   1 root    root     10,   126 Aug 20 10:03 userfaultfd
+drwxr-xr-x   4 root    root            80 Aug 20 10:03 v4l
+crw-rw----   1 root    tty       7,     0 Aug 20 10:03 vcs
+crw-rw----   1 root    tty       7,     1 Aug 20 10:03 vcs1
+crw-rw----   1 root    tty       7,     2 Aug 20 10:03 vcs2
+crw-rw----   1 root    tty       7,     3 Aug 20 10:03 vcs3
+crw-rw----   1 root    tty       7,     4 Aug 20 10:03 vcs4
+crw-rw----   1 root    tty       7,     5 Aug 20 10:03 vcs5
+crw-rw----   1 root    tty       7,     6 Aug 20 10:03 vcs6
+crw-rw----   1 root    tty       7,   128 Aug 20 10:03 vcsa
+crw-rw----   1 root    tty       7,   129 Aug 20 10:03 vcsa1
+crw-rw----   1 root    tty       7,   130 Aug 20 10:03 vcsa2
+crw-rw----   1 root    tty       7,   131 Aug 20 10:03 vcsa3
+crw-rw----   1 root    tty       7,   132 Aug 20 10:03 vcsa4
+crw-rw----   1 root    tty       7,   133 Aug 20 10:03 vcsa5
+crw-rw----   1 root    tty       7,   134 Aug 20 10:03 vcsa6
+crw-rw----   1 root    tty       7,    64 Aug 20 10:03 vcsu
+crw-rw----   1 root    tty       7,    65 Aug 20 10:03 vcsu1
+crw-rw----   1 root    tty       7,    66 Aug 20 10:03 vcsu2
+crw-rw----   1 root    tty       7,    67 Aug 20 10:03 vcsu3
+crw-rw----   1 root    tty       7,    68 Aug 20 10:03 vcsu4
+crw-rw----   1 root    tty       7,    69 Aug 20 10:03 vcsu5
+crw-rw----   1 root    tty       7,    70 Aug 20 10:03 vcsu6
+drwxr-xr-x   2 root    root            60 Aug 20 10:03 vfio
+crw-------   1 root    root     10,   127 Aug 20 10:03 vga_arbiter
+crw-------   1 root    root     10,   137 Aug 20 10:03 vhci
+crw-rw----   1 root    kvm      10,   238 Aug 20 10:03 vhost-net
+crw-rw----   1 root    kvm      10,   241 Aug 20 10:03 vhost-vsock
+crw-rw----+  1 root    video    81,     0 Aug 20 10:03 video0
+crw-rw----+  1 root    video    81,     1 Aug 20 10:03 video1
+crw-------   1 root    root     10,   130 Aug 20 10:03 watchdog
+crw-------   1 root    root    242,     0 Aug 20 10:03 watchdog0
+crw-rw-rw-   1 root    root      1,     5 Aug 20 10:03 zero
+                                                                                                                                                                                                                                   
+┌──(shivam1㉿Venom)-[/dev]
+└─$ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
