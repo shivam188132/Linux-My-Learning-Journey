@@ -1535,4 +1535,581 @@ libvk_swiftshader.so               xdg-settings
                                                                                 
 ┌──(shivam1㉿Venom)-[/opt/google/chrome]
 └─$ 
------------------------------------------------
+------------------------------------ STRUCTURE OF LINUX FS ---------------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls -l /lib
+lrwxrwxrwx 1 root root 7 Jul  4 12:31 /lib -> usr/lib
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls -ld /lib
+lrwxrwxrwx 1 root root 7 Jul  4 12:31 /lib -> usr/lib
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls -ld /lib32 
+lrwxrwxrwx 1 root root 9 Jul  4 12:37 /lib32 -> usr/lib32
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ ls -ld /lib64 
+lrwxrwxrwx 1 root root 9 Jul  4 12:31 /lib64 -> usr/lib64
+                                                                                
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cd /sys
+                                                                                
+┌──(shivam1㉿Venom)-[/sys]
+└─$ ls
+block  class  devices   fs          kernel  power
+bus    dev    firmware  hypervisor  module
+                                                                                
+┌──(shivam1㉿Venom)-[/sys]
+└─$ ls -ld kernel
+drwxr-xr-x 17 root root 0 Aug 25 09:55 kernel
+                                                                                
+┌──(shivam1㉿Venom)-[/sys]
+└─$ cd kernel
+                                                                                
+┌──(shivam1㉿Venom)-[/sys/kernel]
+└─$ ls
+address_bits           fscaps              notes          software_nodes
+boot_params            iommu_groups        oops_count     sunrpc
+btf                    irq                 profiling      tracing
+cgroup                 kexec_crash_loaded  rcu_expedited  uevent_seqnum
+config                 kexec_crash_size    rcu_normal     vmcoreinfo
+cpu_byteorder          kexec_loaded        reboot         warn_count
+crash_elfcorehdr_size  livepatch           security
+debug                  mm                  slab
+                                                                                
+┌──(shivam1㉿Venom)-[/sys/kernel]
+└─$ cd /proc
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls
+1      16362  2207   2577   31766  430    51     71         consoles
+100    16421  221    25827  32     431    51108  72         cpuinfo
+1004   16639  222    25873  3202   432    51109  73         crypto
+1006   17     223    2588   32442  433    51390  731        devices
+1007   17252  224    25893  33     434    51837  738        diskstats
+101    1732   2248   25902  3390   435    51918  739        dma
+1010   1758   225    25938  35     4355   51997  74         driver
+102    1778   2252   2594   36     436    52386  740        dynamic_debug
+1025   1780   2258   2595   369    4364   52590  741        execdomains
+103    17850  226    25969  37     43641  53     742        fb
+104    18     2264   26     370    437    53264  743        filesystems
+1043   1802   2265   2607   371    438    53336  744        fs
+105    1803   227    2617   372    439    53387  745        interrupts
+106    1805   228    262    379    44     54     746        iomem
+107    1806   22886  2634   38     440    54475  747        ioports
+1079   1807   229    264    38458  441    54586  748        irq
+108    1808   23     2642   3863   44145  55     749        kallsyms
+109    1809   230    2676   38871  44159  55136  75         kcore
+11     18109  2306   27     39     442    55150  750        keys
+110    1838   231    2713   39038  443    55326  751        key-users
+11094  1841   2312   2715   39104  444    55339  77         kmsg
+112    1881   23174  273    39156  445    55600  773        kpagecgroup
+113    19     2319   274    39364  44539  55607  774        kpagecount
+114    19026  2322   2749   39462  44540  55750  78         kpageflags
+115    19027  2323   2752   4      446    55751  79         loadavg
+116    1974   2329   2762   40248  447    558    8          locks
+117    1991   2335   2789   406    448    56     80         meminfo
+118    1998   2337   288    407    449    56003  81         misc
+120    2      2342   289    408    45     56016  822        modules
+1206   20     2348   28927  409    450    56164  829        mounts
+129    2014   2351   29     41     451    56165  83         mtrr
+13     2015   2354   290    410    47     56166  831        net
+13039  2016   2362   291    411    47358  56419  833        pagetypeinfo
+13130  2027   2370   292    412    47706  56480  835        partitions
+13152  2034   23739  29326  413    47787  56481  836        pressure
+13197  2037   2380   29337  414    48     56602  839        schedstat
+13247  2069   2394   2977   415    48216  56696  84         self
+1329   2098   24     2982   416    48453  57     840        slabinfo
+13311  21     24116  2983   417    48772  577    85         softirqs
+135    2132   2418   2985   418    49     582    86         stat
+13549  2135   2423   2987   419    494    59     87         swaps
+136    2153   2428   2993   42     49446  6      89         sys
+138    2158   2441   2994   420    495    60     929        sysrq-trigger
+139    216    2461   2996   421    49629  606    947        sysvipc
+14     21636  2484   3      422    49637  61     9678       thread-self
+142    2164   24844  30     423    5      62     98         timer_list
+145    217    24904  30273  424    50     63     99         tty
+1475   218    2498   3036   425    50182  65     acpi       uptime
+15     2184   25     3041   426    50463  66     asound     version
+15648  219    2502   3056   427    50582  67     buddyinfo  vmallocinfo
+16     2194   2560   307    428    50785  68     bus        vmstat
+16323  22     2569   31     429    50849  69     cgroups    zoneinfo
+16347  220    25741  316    43     50957  7      cmdline
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ cat cpuinfo
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3392.900
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3393.227
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 0
+cpu cores	: 6
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3409.260
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 1108.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 1
+cpu cores	: 6
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 1108.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 1108.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 2
+cpu cores	: 6
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3970.382
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 3
+cpu cores	: 6
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3749.271
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 3
+cpu cores	: 6
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 8
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 3771.866
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 9
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 1108.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 4
+cpu cores	: 6
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 10
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 4231.329
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 11
+vendor_id	: AuthenticAMD
+cpu family	: 25
+model		: 80
+model name	: AMD Ryzen 5 5600H with Radeon Graphics
+stepping	: 0
+microcode	: 0xa500011
+cpu MHz		: 1108.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 12
+core id		: 5
+cpu cores	: 6
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass srso ibpb_no_ret
+bogomips	: 6587.71
+TLB size	: 2560 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls /run
+console-setup  lock            postgresql         sslh
+credentials    log             rpcbind            sudo
+crond.pid      motd.d          rpc_pipefs         systemd
+crond.reboot   mount           screen             tmpfiles.d
+cryptsetup     network         sendsigs.omit.d    udev
+dbus           NetworkManager  setrans            udisks2
+gdm3           openvpn         shm                user
+gdm3.pid       openvpn-client  sm-notify.pid      wpa_supplicant
+initctl        openvpn-server  speech-dispatcher
+initramfs      pcscd           sshd
+iodine         plymouth        ssh-unix-local
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ cat /proc/version
+Linux version 6.12.33+kali-amd64 (devel@kali.org) (x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #1 SMP PREEMPT_DYNAMIC Kali 6.12.33-1kali1 (2025-06-25)
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls /root
+ls: cannot open directory '/root': Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ sudo !!
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ sudo ls /root
+[sudo] password for shivam1: 
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls /root
+ls: cannot open directory '/root': Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ sudo !! 
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ sudo ls /root
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls
+1      16421  222    2588   33     435    53264  68         cgroups
+100    16639  223    25893  3390   4355   53336  69         cmdline
+1004   17     224    25902  35     436    53387  7          consoles
+1006   17252  2248   25938  36     4364   54     71         cpuinfo
+1007   1732   225    2594   369    43641  54475  72         crypto
+101    1758   2252   2595   37     437    54586  73         devices
+1010   1778   2258   25969  370    438    55     731        diskstats
+102    1780   226    26     371    439    55136  738        dma
+1025   17850  2264   2607   372    44     55339  739        driver
+103    18     2265   2617   379    440    55600  74         dynamic_debug
+104    1802   227    262    38     441    55607  740        execdomains
+1043   1803   228    2634   38458  44145  55750  741        fb
+105    1805   22886  264    3863   44159  55751  742        filesystems
+106    1806   229    2642   38871  442    558    743        fs
+107    1807   23     2676   39     443    56     744        interrupts
+1079   1808   230    27     39038  444    56016  745        iomem
+108    1809   2306   2713   39104  445    56419  746        ioports
+109    18109  231    2715   39156  44539  56602  747        irq
+11     1838   2312   273    39364  44540  56831  748        kallsyms
+110    1841   23174  274    39462  446    57     749        kcore
+11094  1881   2319   2749   4      447    57019  75         keys
+112    19     2322   2752   40248  448    57020  750        key-users
+113    19026  2323   2762   406    449    57416  751        kmsg
+114    19027  2329   2789   407    45     57417  77         kpagecgroup
+115    1974   2335   288    408    450    57424  773        kpagecount
+116    1991   2337   289    409    451    57496  774        kpageflags
+117    1998   2342   28927  41     47     57563  78         loadavg
+118    2      2348   29     410    47358  577    79         locks
+120    20     2351   290    411    47706  582    8          meminfo
+1206   2014   2354   291    412    47787  58207  80         misc
+129    2015   2362   292    413    48     58315  81         modules
+13     2016   2370   29326  414    48216  58316  822        mounts
+13039  2027   23739  29337  415    48453  58436  829        mtrr
+13130  2034   2380   2977   416    48772  58571  83         net
+13152  2037   2394   2982   417    49     58632  831        pagetypeinfo
+13197  2069   24     2983   418    494    58633  833        partitions
+13247  2098   24116  2985   419    495    58977  835        pressure
+1329   21     2418   2987   42     49629  58978  836        schedstat
+13311  2132   2423   2993   420    5      59     839        self
+135    2135   2428   2994   421    50     59208  84         slabinfo
+13549  2153   2441   2996   422    50182  59217  840        softirqs
+136    2158   2461   3      423    50463  59240  85         stat
+138    216    2484   30     424    50582  59350  86         swaps
+139    21636  24844  30273  425    50785  59384  87         sys
+14     2164   24904  3036   426    50849  59413  89         sysrq-trigger
+142    217    2498   3041   427    50957  6      929        sysvipc
+145    218    25     3056   428    51     60     947        thread-self
+1475   2184   2502   307    429    51108  606    9678       timer_list
+15     219    2560   31     43     51109  61     98         tty
+15648  2194   2569   316    430    51837  62     99         uptime
+16     22     25741  31766  431    51918  63     acpi       version
+16323  220    2577   32     432    51997  65     asound     vmallocinfo
+16347  2207   25827  3202   433    52590  66     buddyinfo  vmstat
+16362  221    25873  32442  434    53     67     bus        zoneinfo
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ df -h /run
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  2.0M  1.5G   1% /run
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls -ld /sbin
+lrwxrwxrwx 1 root root 8 Jul  4 12:31 /sbin -> usr/sbin
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls /srv/   
+tftp
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ ls /srv/tftp
+                                                                                
+┌──(shivam1㉿Venom)-[/proc]
+└─$ cd /srv/tftp 
+                                                                                
+┌──(shivam1㉿Venom)-[/srv/tftp]
+└─$ ls
+                                                                                
+┌──(shivam1㉿Venom)-[/srv/tftp]
+└─$ ls -a
+.  ..
+                                                                                
+┌──(shivam1㉿Venom)-[/srv/tftp]
+└─$ cat /sys/class/power_supply/BAT0/capacity  # Laptop battery %
+cat: /sys/class/power_supply/BAT0/capacity: No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[/srv/tftp]
+└─$ cat /sys/class/power_supply/BAT1/capacity
+100
+                                                                                
+┌──(shivam1㉿Venom)-[/srv/tftp]
+└─$ 
+
+
+
+------------------------------------------------------------------------------------------------------------------------
