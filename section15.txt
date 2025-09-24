@@ -1,0 +1,573 @@
+┌──(shivam1㉿Venom)-[~]
+└─$ cat etc/passwd
+cat: etc/passwd: No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/passwd
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+mysql:x:101:102:MariaDB Server:/nonexistent:/bin/false
+tss:x:102:104:TPM software stack:/var/lib/tpm:/bin/false
+strongswan:x:103:65534::/var/lib/strongswan:/usr/sbin/nologin
+systemd-timesync:x:992:992:systemd Time Synchronization:/:/usr/sbin/nologin
+_gophish:x:104:106::/var/lib/gophish:/usr/sbin/nologin
+iodine:x:105:65534::/run/iodine:/usr/sbin/nologin
+messagebus:x:991:991:System Message Bus:/nonexistent:/usr/sbin/nologin
+tcpdump:x:106:107::/nonexistent:/usr/sbin/nologin
+miredo:x:107:65534::/var/run/miredo:/usr/sbin/nologin
+_rpc:x:108:65534::/run/rpcbind:/usr/sbin/nologin
+redis:x:109:110::/var/lib/redis:/usr/sbin/nologin
+mosquitto:x:110:113::/var/lib/mosquitto:/usr/sbin/nologin
+redsocks:x:111:114::/var/run/redsocks:/usr/sbin/nologin
+stunnel4:x:990:990:stunnel service system account:/var/run/stunnel4:/usr/sbin/nologin
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
+Debian-snmp:x:112:115::/var/lib/snmp:/bin/false
+sslh:x:113:117::/nonexistent:/usr/sbin/nologin
+postgres:x:114:118:PostgreSQL administrator:/var/lib/postgresql:/bin/bash
+avahi:x:115:119:Avahi mDNS daemon:/run/avahi-daemon:/usr/sbin/nologin
+speech-dispatcher:x:116:29:Speech Dispatcher:/run/speech-dispatcher:/bin/false
+_gvm:x:117:120::/var/lib/openvas:/usr/sbin/nologin
+usbmux:x:118:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+cups-pk-helper:x:119:121:user for cups-pk-helper service:/nonexistent:/usr/sbin/nologin
+nm-openvpn:x:120:122:NetworkManager OpenVPN:/var/lib/openvpn/chroot:/usr/sbin/nologin
+inetsim:x:121:123::/var/lib/inetsim:/usr/sbin/nologin
+fwupd-refresh:x:987:987:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+nm-openconnect:x:122:126:NetworkManager OpenConnect plugin:/var/lib/NetworkManager:/usr/sbin/nologin
+geoclue:x:123:127::/var/lib/geoclue:/usr/sbin/nologin
+lightdm:x:124:128:Light Display Manager:/var/lib/lightdm:/bin/false
+gnome-remote-desktop:x:986:986:GNOME Remote Desktop:/var/lib/gnome-remote-desktop:/usr/sbin/nologin
+statd:x:125:65534::/var/lib/nfs:/usr/sbin/nologin
+saned:x:126:129::/var/lib/saned:/usr/sbin/nologin
+polkitd:x:985:985:User for polkitd:/:/usr/sbin/nologin
+rtkit:x:127:130:RealtimeKit:/proc:/usr/sbin/nologin
+colord:x:128:131:colord colour management daemon:/var/lib/colord:/usr/sbin/nologin
+Debian-gdm:x:129:133:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shivam1:x:1000:1000:Shivam,,,:/home/shivam1:/bin/zsh
+_flatpak:x:130:135:Flatpak system-wide installation helper:/nonexistent:/usr/sbin/nologin
+systemd-oom:x:983:983:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+pipewire:x:982:125:system user for pipewire:/nonexistent:/usr/sbin/nologin
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+
+----------------------------------------------------------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~/Linux]
+└─$ cat /etc/group | grep 'shivam'
+adm:x:4:shivam1
+dialout:x:20:shivam1
+cdrom:x:24:shivam1
+floppy:x:25:shivam1
+sudo:x:27:shivam1
+audio:x:29:shivam1
+dip:x:30:shivam1
+video:x:44:shivam1
+plugdev:x:46:shivam1
+users:x:100:shivam1
+netdev:x:101:shivam1
+scanner:x:103:saned,shivam1
+bluetooth:x:116:shivam1
+lpadmin:x:121:shivam1
+wireshark:x:124:shivam1
+shivam1:x:1000:
+kaboxer:x:134:shivam1
+----------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ useradd -m -d /home/lauren lauren
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo useradd -m -d /home/lauren lauren 
+[sudo] password for shivam1: 
+Sorry, try again.
+[sudo] password for shivam1: 
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/passwd | grep 'lauren'
+lauren:x:1001:1001::/home/lauren:/bin/sh
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/passwd | grep 'shivam1'
+shivam1:x:1000:1000:Shivam,,,:/home/shivam1:/bin/zsh
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/group | grep 'lauren'
+lauren:x:1001:
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/group | grep 'shivam'
+adm:x:4:shivam1
+dialout:x:20:shivam1
+cdrom:x:24:shivam1
+floppy:x:25:shivam1
+sudo:x:27:shivam1
+audio:x:29:shivam1
+dip:x:30:shivam1
+video:x:44:shivam1
+plugdev:x:46:shivam1
+users:x:100:shivam1
+netdev:x:101:shivam1
+scanner:x:103:saned,shivam1
+bluetooth:x:116:shivam1
+lpadmin:x:121:shivam1
+wireshark:x:124:shivam1
+shivam1:x:1000:
+kaboxer:x:134:shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/shadow 
+cat: /etc/shadow: Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo !!
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo cat /etc/shadow
+root:!:20273:0:99999:7:::
+daemon:*:20273:0:99999:7:::
+bin:*:20273:0:99999:7:::
+sys:*:20273:0:99999:7:::
+sync:*:20273:0:99999:7:::
+games:*:20273:0:99999:7:::
+man:*:20273:0:99999:7:::
+lp:*:20273:0:99999:7:::
+mail:*:20273:0:99999:7:::
+news:*:20273:0:99999:7:::
+uucp:*:20273:0:99999:7:::
+proxy:*:20273:0:99999:7:::
+www-data:*:20273:0:99999:7:::
+backup:*:20273:0:99999:7:::
+list:*:20273:0:99999:7:::
+irc:*:20273:0:99999:7:::
+_apt:*:20273:0:99999:7:::
+nobody:*:20273:0:99999:7:::
+systemd-network:!*:20273:::::1:
+dhcpcd:!:20273::::::
+mysql:!:20273::::::
+tss:!:20273::::::
+strongswan:!:20273::::::
+systemd-timesync:!*:20273:::::1:
+_gophish:!:20273::::::
+iodine:!:20273::::::
+messagebus:!*:20273::::::
+tcpdump:!:20273::::::
+miredo:!:20273::::::
+_rpc:!:20273::::::
+redis:!:20273::::::
+mosquitto:!:20273::::::
+redsocks:!:20273::::::
+stunnel4:!*:20273::::::
+sshd:!*:20273::::::
+dnsmasq:!:20273::::::
+Debian-snmp:!:20273::::::
+sslh:!:20273::::::
+postgres:!:20273::::::
+avahi:!:20273::::::
+speech-dispatcher:!:20273::::::
+_gvm:!:20273::::::
+usbmux:!:20273::::::
+cups-pk-helper:!:20273::::::
+nm-openvpn:!:20273::::::
+inetsim:!:20273::::::
+fwupd-refresh:!*:20273::::::
+nm-openconnect:!:20273::::::
+geoclue:!:20273::::::
+lightdm:!:20273::::::
+gnome-remote-desktop:!*:20273::::::
+statd:!:20273::::::
+saned:!:20273::::::
+polkitd:!*:20273::::::
+rtkit:!:20273::::::
+colord:!:20273::::::
+Debian-gdm:!:20273::::::
+shivam1:$y$j9T$uSBgTcvRxClnLFWxKiBvR/$0/ilvzNjQ.BY1Ksf.XJAEffsfnWg.aM8FfcH6MWrsZ5:20273:0:99999:7:::
+_flatpak:!:20277::::::
+systemd-oom:!*:20336:::::1:
+pipewire:!*:20336::::::
+lauren:!:20336:0:99999:7:::
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cd /home
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ cd lauren; ls
+cd: permission denied: lauren
+lauren  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ passed -S
+Command 'passed' not found, did you mean:
+  command 'passwd' from deb passwd
+Try: sudo apt install <deb name>
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ passwd -S
+shivam1 P 2025-07-04 0 99999 7 -1
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ passwd -S lauren
+passwd: You may not view or modify password information for lauren.
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo passwd -S lauren
+lauren L 2025-09-05 0 99999 7 -1
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo passwd lauren   
+New password: 
+Retype new password: 
+passwd: password updated successfully
+                                                                                
+┌──(shivam1㉿Venom)-[/home]
+└─$ 
+-------------------------------------------------------------------------------------------------------------------------------------------
+experiment of changing password on my system :)
+┌──(shivam1㉿Venom)-[~]
+└─$ passwd 
+Changing password for shivam1.
+Current password: 
+New password: 
+Retype new password: 
+You must choose a longer password.
+New password: 
+Password change has been aborted.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo passwd
+[sudo] password for shivam1: 
+New password: 
+Retype new password: 
+passwd: password updated successfully
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+
+------------------------------------------------------------------------------------------------------------------------
+┌──(shivam1㉿Venom)-[~]
+└─$ groups shivam2
+groups: ‘shivam2’: no such user
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ groups shivam1
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ groups lauren 
+lauren : lauren
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+
+
+---------------------------------------------------------------------------------------------------------------------
+DELETING USER 
+--------------------------------------------------------------------------------------------------------------
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ useradd -m max
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo !!
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo useradd -m max
+[sudo] password for shivam1: 
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls /home 
+lauren  max  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/passwd > grep 'max'
+cat: max: No such file or directory
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/passwd | grep 'max'
+max:x:1002:1002::/home/max:/bin/sh
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ groups max
+max : max
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ userdel max
+userdel: Permission denied.
+userdel: cannot lock /etc/passwd; try again later.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo !!
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo userdel max
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls /home/
+lauren  max  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo rm -R /home/max/
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls /home/            
+lauren  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo useradd -m max
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls /home/    
+lauren  max  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo userdel -r max
+userdel: max mail spool (/var/mail/max) not found
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls /home/
+lauren  shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+-----------------------------------------------------------------------------------------------------------------------
+5. What Happens to the User's Files Elsewhere?
+A critical point to understand: userdel -r only removes the user's home directory and mail spool. If the user owned files anywhere else on the system (e.g., in /tmp/, /var/www/, or a shared directory), those files will remain on the system. Their ownership will change to the former user's UID (a "ghost" UID). System administrators often need to find and reassign or delete these files manually using tools like find.
+
+# Example: Find files owned by UID 1001 (max's old UID) anywhere on the system
+sudo find / -uid 1001 2>/dev/null
+----------------------------------------------------------------------------------------------------------------------
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/Linux ; ls
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ touch test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ ls -la test
+-rw-rw-r-- 1 shivam1 shivam1 0 Sep 24 12:03 test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:shivam1
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:shivam1
+fax:x:21:
+voice:x:22:
+cdrom:x:24:shivam1
+floppy:x:25:shivam1
+tape:x:26:
+sudo:x:27:shivam1
+audio:x:29:shivam1
+dip:x:30:shivam1
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:shivam1
+sasl:x:45:
+plugdev:x:46:shivam1
+staff:x:50:
+games:x:60:
+users:x:100:shivam1
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+input:x:996:
+sgx:x:995:
+kvm:x:994:
+render:x:993:
+netdev:x:101:shivam1
+mysql:x:102:
+scanner:x:103:saned,shivam1
+tss:x:104:
+systemd-timesync:x:992:
+kismet:x:105:
+_gophish:x:106:
+messagebus:x:991:
+tcpdump:x:107:
+_ssh:x:108:
+ssl-cert:x:109:postgres
+redis:x:110:_gvm
+i2c:x:111:
+plocate:x:112:
+mosquitto:x:113:
+redsocks:x:114:
+stunnel4:x:990:stunnel4
+Debian-snmp:x:115:
+bluetooth:x:116:shivam1
+sslh:x:117:
+postgres:x:118:
+avahi:x:119:
+_gvm:x:120:
+lpadmin:x:121:shivam1
+sambashare:x:989:
+nm-openvpn:x:122:
+inetsim:x:123:
+wireshark:x:124:shivam1
+winbindd_priv:x:988:
+pipewire:x:125:
+fwupd-refresh:x:987:
+nm-openconnect:x:126:
+geoclue:x:127:
+lightdm:x:128:
+gnome-remote-desktop:x:986:
+saned:x:129:
+polkitd:x:985:
+rtkit:x:130:
+colord:x:131:
+kali-trusted:x:132:
+Debian-gdm:x:133:
+shivam1:x:1000:
+kaboxer:x:134:shivam1
+_flatpak:x:135:
+clock:x:984:
+systemd-oom:x:983:
+lauren:x:1001:
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren
+lauren : lauren
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/sysstat/sa01  
+��u!
+    P
+P    �bLinuxVenom6.12.33+kali-amd64x86_64IST�
+���P
+�8��"�� 	�(
+                  �P
+�X      ��,        �P
+(� )�@*�@�b�h':LINUX SLEEP MODE (pre suspend))f�h55LINUX SLEEP MODE (post suspend)���h␦LINUX SLEEP MODE (pre suspend)(ӵh&8LINUX SLEEP MODE (post suspend)                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/ ; ls        
+tail: error reading '/var/log/': Is a directory
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+ test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/     
+tail: error reading '/var/log/': Is a directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1      
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+----------------------------------------------------------------------------------------------------------------------------
+Add a user to a Group 
+----------------------------------------------------------------------------------------------------------------
