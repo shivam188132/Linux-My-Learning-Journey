@@ -568,6 +568,933 @@ shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users ne
                                                                        
 ┌──(shivam1㉿Venom)-[~/Study/Linux]
 └─$ 
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/Linux ; ls
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ touch test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ ls -la test
+-rw-rw-r-- 1 shivam1 shivam1 0 Sep 24 12:03 test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:shivam1
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:shivam1
+fax:x:21:
+voice:x:22:
+cdrom:x:24:shivam1
+floppy:x:25:shivam1
+tape:x:26:
+sudo:x:27:shivam1
+audio:x:29:shivam1
+dip:x:30:shivam1
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:shivam1
+sasl:x:45:
+plugdev:x:46:shivam1
+staff:x:50:
+games:x:60:
+users:x:100:shivam1
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+input:x:996:
+sgx:x:995:
+kvm:x:994:
+render:x:993:
+netdev:x:101:shivam1
+mysql:x:102:
+scanner:x:103:saned,shivam1
+tss:x:104:
+systemd-timesync:x:992:
+kismet:x:105:
+_gophish:x:106:
+messagebus:x:991:
+tcpdump:x:107:
+_ssh:x:108:
+ssl-cert:x:109:postgres
+redis:x:110:_gvm
+i2c:x:111:
+plocate:x:112:
+mosquitto:x:113:
+redsocks:x:114:
+stunnel4:x:990:stunnel4
+Debian-snmp:x:115:
+bluetooth:x:116:shivam1
+sslh:x:117:
+postgres:x:118:
+avahi:x:119:
+_gvm:x:120:
+lpadmin:x:121:shivam1
+sambashare:x:989:
+nm-openvpn:x:122:
+inetsim:x:123:
+wireshark:x:124:shivam1
+winbindd_priv:x:988:
+pipewire:x:125:
+fwupd-refresh:x:987:
+nm-openconnect:x:126:
+geoclue:x:127:
+lightdm:x:128:
+gnome-remote-desktop:x:986:
+saned:x:129:
+polkitd:x:985:
+rtkit:x:130:
+colord:x:131:
+kali-trusted:x:132:
+Debian-gdm:x:133:
+shivam1:x:1000:
+kaboxer:x:134:shivam1
+_flatpak:x:135:
+clock:x:984:
+systemd-oom:x:983:
+lauren:x:1001:
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren
+lauren : lauren
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/sysstat/sa01  
+��u!
+    P
+P    �bLinuxVenom6.12.33+kali-amd64x86_64IST�
+���P
+�8��"�� 	�(
+                  �P
+�X      ��,        �P
+(� )�@*�@�b�h':LINUX SLEEP MODE (pre suspend))f�h55LINUX SLEEP MODE (post suspend)���h␦LINUX SLEEP MODE (pre suspend)(ӵh&8LINUX SLEEP MODE (post suspend)                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/ ; ls        
+tail: error reading '/var/log/': Is a directory
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+ test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/     
+tail: error reading '/var/log/': Is a directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1      
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+                                                                       
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+┌──(shivam1㉿Venom)-[~]
+└─$ cd Study/Linux ; ls
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ touch test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ ls -la test
+-rw-rw-r-- 1 shivam1 shivam1 0 Sep 24 12:03 test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:shivam1
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:shivam1
+fax:x:21:
+voice:x:22:
+cdrom:x:24:shivam1
+floppy:x:25:shivam1
+tape:x:26:
+sudo:x:27:shivam1
+audio:x:29:shivam1
+dip:x:30:shivam1
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:shivam1
+sasl:x:45:
+plugdev:x:46:shivam1
+staff:x:50:
+games:x:60:
+users:x:100:shivam1
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+input:x:996:
+sgx:x:995:
+kvm:x:994:
+render:x:993:
+netdev:x:101:shivam1
+mysql:x:102:
+scanner:x:103:saned,shivam1
+tss:x:104:
+systemd-timesync:x:992:
+kismet:x:105:
+_gophish:x:106:
+messagebus:x:991:
+tcpdump:x:107:
+_ssh:x:108:
+ssl-cert:x:109:postgres
+redis:x:110:_gvm
+i2c:x:111:
+plocate:x:112:
+mosquitto:x:113:
+redsocks:x:114:
+stunnel4:x:990:stunnel4
+Debian-snmp:x:115:
+bluetooth:x:116:shivam1
+sslh:x:117:
+postgres:x:118:
+avahi:x:119:
+_gvm:x:120:
+lpadmin:x:121:shivam1
+sambashare:x:989:
+nm-openvpn:x:122:
+inetsim:x:123:
+wireshark:x:124:shivam1
+winbindd_priv:x:988:
+pipewire:x:125:
+fwupd-refresh:x:987:
+nm-openconnect:x:126:
+geoclue:x:127:
+lightdm:x:128:
+gnome-remote-desktop:x:986:
+saned:x:129:
+polkitd:x:985:
+rtkit:x:130:
+colord:x:131:
+kali-trusted:x:132:
+Debian-gdm:x:133:
+shivam1:x:1000:
+kaboxer:x:134:shivam1
+_flatpak:x:135:
+clock:x:984:
+systemd-oom:x:983:
+lauren:x:1001:
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren
+lauren : lauren
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/sysstat/sa01  
+��u!
+    P
+P    �bLinuxVenom6.12.33+kali-amd64x86_64IST�
+���P
+�8��"�� 	�(
+                  �P
+�X      ��,        �P
+(� )�@*�@�b�h':LINUX SLEEP MODE (pre suspend))f�h55LINUX SLEEP MODE (post suspend)���h␦LINUX SLEEP MODE (pre suspend)(ӵh&8LINUX SLEEP MODE (post suspend)                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/ ; ls        
+tail: error reading '/var/log/': Is a directory
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+ test
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ tail /var/log/     
+tail: error reading '/var/log/': Is a directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups lauren shivam1      
+lauren : lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+----------------------------------------------------------------------------------                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ grep $USER /etc/passwd
+shivam1:x:1000:1000:Shivam,,,:/home/shivam1:/bin/zsh
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ getent group sudo
+sudo:x:27:shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ getent group lsusb
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ getent group lpadmin
+lpadmin:x:121:shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 Add a user to a Group 
 ----------------------------------------------------------------------------------------------------------------
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : lauren adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo usermod -g dialout lauren
+[sudo] password for shivam1: 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+--------------------------------------------------------------------------------------------------------------------------------------
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : lauren adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo usermod -g dialout lauren
+[sudo] password for shivam1: 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo deluser lauren admin
+[sudo] password for shivam1: 
+fatal: The group `admin' does not exist.
+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo deluser lauren adm    
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren    
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : lauren adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo usermod -g dialout lauren
+[sudo] password for shivam1: 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout adm lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo deluser lauren admin
+[sudo] password for shivam1: 
+fatal: The group `admin' does not exist.
+
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo deluser lauren adm    
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ groups shivam1 lauren    
+shivam1 : shivam1 adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+lauren : dialout lpadmin
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+-------------------------------------------------------------------------------------------------------------
+SWITCHING USERS: 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su lauren
+Password: 
+┌──(lauren㉿Venom)-[/home/shivam1/Study/Linux]
+└─$ ls
+ assignment
+ clear.txt
+ CompanyShare
+ env.py
+ genymotion
+ genymotion-3.6.0-linux_x64.bin
+ __MACOSX
+ mkt_moving_repo
+'notes(environment_var).txt'
+ notes.txt
+ notes.txt.save
+ online_applications.txt
+'os(mod3).txt'
+ output.txt
+ README.md
+ review.txt
+ romeo.txt
+'section_11(creating a custom bash prompt)'
+'section_12(notes)'
+ section14.txt
+ section15.txt
+ test
+
+┌──(lauren㉿Venom)-[/home/shivam1/Study/Linux]
+└─$ cd ~
+
+┌──(lauren㉿Venom)-[~]
+└─$ ls
+Desktop    Downloads  Pictures  Templates
+Documents  Music      Public    Videos
+
+┌──(lauren㉿Venom)-[~]
+└─$ cd Downloads ; ls
+
+┌──(lauren㉿Venom)-[~/Downloads]
+└─$ ls
+
+┌──(lauren㉿Venom)-[~/Downloads]
+└─$ exit
+exit
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su 
+Password: 
+su: Authentication failure
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su 
+Password: 
+
+
+^C
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su -s
+su: option requires an argument -- 's'
+Try 'su --help' for more information.
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su 
+Password: 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo passwd su
+[sudo] password for shivam1: 
+passwd: user 'su' does not exist
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo passwd root
+New password: 
+Retype new password: 
+passwd: password updated successfully
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su root
+Password: 
+┌──(root㉿Venom)-[/home/shivam1/Study/Linux]
+└─# exit
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo passwd -d root
+passwd: password changed.
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su
+┌──(root㉿Venom)-[/home/shivam1/Study/Linux]
+└─# exit
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo passwd -d -l root
+passwd: password changed.
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ su
+Password: 
+
+su: Authentication failure
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo /etc/shadow/
+sudo: /etc/shadow/: command not found
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo cat /etc/shadow/
+cat: /etc/shadow/: Not a directory
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo cat /etc/shadow 
+root:!:20355:0:99999:7:::
+daemon:*:20273:0:99999:7:::
+bin:*:20273:0:99999:7:::
+sys:*:20273:0:99999:7:::
+sync:*:20273:0:99999:7:::
+games:*:20273:0:99999:7:::
+man:*:20273:0:99999:7:::
+lp:*:20273:0:99999:7:::
+mail:*:20273:0:99999:7:::
+news:*:20273:0:99999:7:::
+uucp:*:20273:0:99999:7:::
+proxy:*:20273:0:99999:7:::
+www-data:*:20273:0:99999:7:::
+backup:*:20273:0:99999:7:::
+list:*:20273:0:99999:7:::
+irc:*:20273:0:99999:7:::
+_apt:*:20273:0:99999:7:::
+nobody:*:20273:0:99999:7:::
+systemd-network:!*:20273:::::1:
+dhcpcd:!:20273::::::
+mysql:!:20273::::::
+tss:!:20273::::::
+strongswan:!:20273::::::
+systemd-timesync:!*:20273:::::1:
+_gophish:!:20273::::::
+iodine:!:20273::::::
+messagebus:!*:20273::::::
+tcpdump:!:20273::::::
+miredo:!:20273::::::
+_rpc:!:20273::::::
+redis:!:20273::::::
+mosquitto:!:20273::::::
+redsocks:!:20273::::::
+stunnel4:!*:20273::::::
+sshd:!*:20273::::::
+dnsmasq:!:20273::::::
+Debian-snmp:!:20273::::::
+sslh:!:20273::::::
+postgres:!:20273::::::
+avahi:!:20273::::::
+speech-dispatcher:!:20273::::::
+_gvm:!:20273::::::
+usbmux:!:20273::::::
+cups-pk-helper:!:20273::::::
+nm-openvpn:!:20273::::::
+inetsim:!:20273::::::
+fwupd-refresh:!*:20273::::::
+nm-openconnect:!:20273::::::
+geoclue:!:20273::::::
+lightdm:!:20273::::::
+gnome-remote-desktop:!*:20273::::::
+statd:!:20273::::::
+saned:!:20273::::::
+polkitd:!*:20273::::::
+rtkit:!:20273::::::
+colord:!:20273::::::
+Debian-gdm:!:20273::::::
+shivam1:$y$j9T$uSBgTcvRxClnLFWxKiBvR/$0/ilvzNjQ.BY1Ksf.XJAEffsfnWg.aM8FfcH6MWrsZ5:20273:0:99999:7:::
+_flatpak:!:20277::::::
+systemd-oom:!*:20336:::::1:
+pipewire:!*:20336::::::
+lauren:$y$j9T$XuaEFpjaQtv9qczcq4yrS0$8eHFWJ5JC/BxgrlhbtpEtBvAEgvsUPIt9y.IlPT4hv7:20336:0:99999:7:::
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ sudo cat /etc/shadow | grep 'root'
+root:!:20355:0:99999:7:::
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ 
+---------------------------------------------------------------------------------
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ cd /home/ ;;s
+zsh: parse error near `;;'
+                                                                       
+┌──(shivam1㉿Venom)-[~/Study/Linux]
+└─$ cd /home/ ; ls
+lauren  shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ cd lauren
+cd: permission denied: lauren
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren ; ls /home/lauren
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+ls: cannot open directory '/home/lauren': Permission denied
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren bash
+[sudo] password for shivam1: 
+┌──(lauren㉿Venom)-[/home]
+└─$ shell --version
+Command 'shell' not found, did you mean:
+  command 'spell' from deb spell
+  command 'bshell' from deb avahi-ui-utils
+Try: apt install <deb name>
+
+┌──(lauren㉿Venom)-[/home]
+└─$ which shell
+
+┌──(lauren㉿Venom)-[/home]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[/home]
+└─$ touch /home/lauren/Document/sudo.txt
+touch: cannot touch '/home/lauren/Document/sudo.txt': No such file or directory
+
+┌──(lauren㉿Venom)-[/home]
+└─$ touch /home/lauren/Documents/sudo.txt
+
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ cd lauren/Documents ; ls
+sudo.txt
+
+┌──(lauren㉿Venom)-[~/Documents]
+└─$ sudo -u lauren -s
+lauren is not in the sudoers file.
+
+┌──(lauren㉿Venom)-[~/Documents]
+└─$ exit
+exit
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ whoami
+shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ whoami
+shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ cd lauren
+cd: permission denied: lauren
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-r role] [-t type] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren touch /home/lauren/file-sudo
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ whoami
+shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ cd /home/lauren
+cd: permission denied: /home/lauren
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren -s bash                     
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ cd lauren
+
+┌──(lauren㉿Venom)-[~]
+└─$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file-sudo  Pictures  Templates
+
+┌──(lauren㉿Venom)-[~]
+└─$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file-sudo  Pictures  Templates
+
+┌──(lauren㉿Venom)-[~]
+└─$ exit
+exit
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ whoami
+shivam1
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren -s bash
+┌──(lauren㉿Venom)-[/home]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[/home]
+└─$ exit
+exit
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren -s     
+┌──(lauren㉿Venom)-[/home]
+└─$ which shell
+shell not found
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ which      
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ which ?
+? not found
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ which /help
+/help not found
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ which $SHELL
+/bin/zsh
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ whoami                
+lauren
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ exit
+                                                                       
+┌──(shivam1㉿Venom)-[/home]
+└─$ sudo -u lauren -s zsh 
+┌──(lauren㉿Venom)-[/home]
+└─$ whoami
+lauren
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ cd /lauren
+cd: no such file or directory: /lauren
+                                                                       
+┌──(lauren㉿Venom)-[/home]
+└─$ cd /home/lauren 
+                                                                       
+┌──(lauren㉿Venom)-[~]
+└─$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file-sudo  Pictures  Templates
+                                                                       
+┌──(lauren㉿Venom)-[~]
+└─$ 
+-----------------------------------------------------------------------------------------------------------------------
+

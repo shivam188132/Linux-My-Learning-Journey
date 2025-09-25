@@ -1,0 +1,460 @@
+┌──(shivam1㉿Venom)-[~]
+└─$ cat /etc/sudoers
+cat: /etc/sudoers: Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo !!
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo cat /etc/sudoers
+[sudo] password for shivam1: 
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+Defaults	mail_badpass
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
+# (#1011624, https://bugs.kde.org/show_bug.cgi?id=452532)
+Defaults	use_pty
+
+# This preserves proxy settings from user environments of root
+# equivalent users (group sudo)
+#Defaults:%sudo env_keep += "http_proxy https_proxy ftp_proxy all_proxy no_proxy"
+
+# This allows running arbitrary commands, but so does ALL, and it means
+# different sudoers have their choice of editor respected.
+#Defaults:%sudo env_keep += "EDITOR"
+
+# Completely harmless preservation of a user preference.
+#Defaults:%sudo env_keep += "GREP_COLOR"
+
+# While you shouldn't normally run git as root, you need to with etckeeper
+#Defaults:%sudo env_keep += "GIT_AUTHOR_* GIT_COMMITTER_*"
+
+# Per-user preferences; root won't have sensible values for them.
+#Defaults:%sudo env_keep += "EMAIL DEBEMAIL DEBFULLNAME"
+
+# "sudo scp" or "sudo rsync" should be able to use your SSH agent.
+#Defaults:%sudo env_keep += "SSH_AGENT_PID SSH_AUTH_SOCK"
+
+# Ditto for GPG agent
+#Defaults:%sudo env_keep += "GPG_AGENT_INFO"
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "@include" directives:
+
+@includedir /etc/sudoers.d
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo visudo /etc/sudoers.d/shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo -k
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo -s
+┌──(root㉿Venom)-[/home/shivam1]
+└─# sudo visudo /etc/sudoers.d/shivam1
+visudo: /etc/sudoers.d/shivam1.tmp unchanged
+                                                                                
+┌──(root㉿Venom)-[/home/shivam1]
+└─# sudo visudo /etc/sudoers.d/lauren 
+visudo: /etc/sudoers.d/lauren.tmp unchanged
+                                                                                
+┌──(root㉿Venom)-[/home/shivam1]
+└─# sudo visudo /etc/sudoers.d/shivam1
+visudo: /etc/sudoers.d/shivam1.tmp unchanged
+                                                                                
+┌──(root㉿Venom)-[/home/shivam1]
+└─# sudo visudo /etc/sudoers.d/lauren 
+                                                                                
+┌──(root㉿Venom)-[/home/shivam1]
+└─# exit
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su -u lauren
+Try 'su --help' for more information.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su lauren
+Password: 
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ ls
+ls: cannot open directory '.': Permission denied
+
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ ls 
+ls: cannot open directory '.': Permission denied
+
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ sudo ls
+ bin	     Downloads	 Pictures      sample   Templates	 vscode
+ demo2.txt   ebpf-drop	 Public        scrcpy   testing.txt
+ Desktop     grep	 resume        shibu    Videos
+ Documents   Music	 safe_folder   Study   'virtubox asst'
+
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ cd ..
+
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ cd shivam1
+bash: cd: shivam1: Permission denied
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd ./shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ cd shivam1
+bash: cd: shivam1: Permission denied
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo !!
+sudo cd shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ su -u lauren -s zsh
+Try 'su --help' for more information.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ ls 
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo ls
+lauren	shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ cd shivam1
+bash: cd: shivam1: Permission denied
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd /shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd /home/shivam1/ ; ls 
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+lauren  shivam1
+
+┌──(lauren㉿Venom)-[/home]
+└─$ pwd
+/home
+
+┌──(lauren㉿Venom)-[/home]
+└─$ exit
+exit
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ whoami
+shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo -u lauren -s zsh
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ whoami
+lauren
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ ls
+ls: cannot open directory '.': Permission denied
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ sudo ls               
+ bin	     Downloads	 Pictures      sample   Templates	 vscode
+ demo2.txt   ebpf-drop	 Public        scrcpy   testing.txt
+ Desktop     grep	 resume        shibu    Videos
+ Documents   Music	 safe_folder   Study   'virtubox asst'
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ sudo ..
+sudo: ..: command not found
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ cd ..          
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ cd shivam1
+cd: permission denied: shivam1
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ sudo cd shivam1
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ ls
+lauren  shivam1
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ whoami    
+lauren
+                                                                                
+┌──(lauren㉿Venom)-[/home]
+└─$ cd lauren 
+                                                                                
+┌──(lauren㉿Venom)-[~]
+└─$ ls
+Desktop    Downloads  Music     Public     Videos
+Documents  file-sudo  Pictures  Templates
+                                                                                
+┌──(lauren㉿Venom)-[~]
+└─$ sudo touch  /home/shivam1/hackingfile
+                                                                                
+┌──(lauren㉿Venom)-[~]
+└─$ exit      
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ whoami
+shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         ebpf-drop     Public        shibu        'virtubox asst'
+ demo2.txt   grep          resume        Study         vscode
+ Desktop     hackingfile   safe_folder   Templates
+ Documents   Music         sample        testing.txt
+ Downloads   Pictures      scrcpy        Videos
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ rm hackingfile
+rm: remove write-protected regular empty file 'hackingfile'? 
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         ebpf-drop     Public        shibu        'virtubox asst'
+ demo2.txt   grep          resume        Study         vscode
+ Desktop     hackingfile   safe_folder   Templates
+ Documents   Music         sample        testing.txt
+ Downloads   Pictures      scrcpy        Videos
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ rm -f hackingfile 
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ ls
+ bin         Downloads   Pictures      sample   Templates        vscode
+ demo2.txt   ebpf-drop   Public        scrcpy   testing.txt
+ Desktop     grep        resume        shibu    Videos
+ Documents   Music       safe_folder   Study   'virtubox asst'
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ 
+-------------------------------------------------------------------------------------------------------
+EX 2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+┌──(lauren㉿Venom)-[~]
+└─$ exit
+logout
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ whoami
+lauren
+                                                                                
+┌──(lauren㉿Venom)-[/home/shivam1]
+└─$ exit
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su -u lauren -s zsh
+Try 'su --help' for more information.
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su - lauren        
+Password: 
+┌──(lauren㉿Venom)-[~]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[~]
+└─$ exit
+logout
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su lauren -s zsh
+Password: 
+su: failed to execute zsh: Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su lauren -s zsh
+Password: 
+su: failed to execute zsh: Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su - lauren     
+Password: 
+┌──(lauren㉿Venom)-[~]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[~]
+└─$ python --version
+Python 3.13.7
+
+┌──(lauren㉿Venom)-[~]
+└─$ python3 /home/shivam1/vscode/main.py
+python3: can't open file '/home/shivam1/vscode/main.py': [Errno 13] Permission denied
+
+┌──(lauren㉿Venom)-[~]
+└─$ sudo !!
+sudo python3 /home/shivam1/vscode/main.py
+[sudo] password for lauren: 
+Sorry, try again.
+[sudo] password for lauren: 
+Sorry, user lauren is not allowed to execute '/usr/bin/python3 /home/shivam1/vscode/main.py' as root on Venom.
+
+┌──(lauren㉿Venom)-[~]
+└─$ 
+
+┌──(lauren㉿Venom)-[~]
+└─$ sudo python3 /home/shivam1/vscode/main.py
+[sudo] password for lauren: 
+Sorry, user lauren is not allowed to execute '/usr/bin/python3 /home/shivam1/vscode/main.py' as root on Venom.
+
+┌──(lauren㉿Venom)-[~]
+└─$ visudo /etc/sudoers.d/lauren
+visudo: /etc/sudoers.d/lauren: Permission denied
+
+┌──(lauren㉿Venom)-[~]
+└─$ exit
+logout
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ visudo /etc/sudoers.d/lauren
+visudo: /etc/sudoers.d/lauren: Permission denied
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ whoami
+shivam1
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su - lauren                 
+Password: 
+┌──(lauren㉿Venom)-[~]
+└─$ sudo visudo /etc/sudoers.d/lauren
+[sudo] password for lauren: 
+Sorry, user lauren is not allowed to execute '/usr/sbin/visudo /etc/sudoers.d/lauren' as root on Venom.
+
+┌──(lauren㉿Venom)-[~]
+└─$ exit
+logout
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ sudo visudo /etc/sudoers.d/lauren
+                                                                                
+┌──(shivam1㉿Venom)-[~]
+└─$ su - lauren                      
+Password: 
+┌──(lauren㉿Venom)-[~]
+└─$ sudo python3 /home/shivam1/vscode/main.py
+7
+15
+
+┌──(lauren㉿Venom)-[~]
+└─$ whoami
+lauren
+
+┌──(lauren㉿Venom)-[~]
+└─$ echo "${PATH}" | tr ':' '/n'
+/home/lauren/.local/bin//usr/local/sbin//usr/sbin//sbin//usr/local/bin//usr/bin//bin//usr/local/games//usr/games//snap/bin//home/lauren/.dotnet/tools
+
+┌──(lauren㉿Venom)-[~]
+└─$ echo "${PATH}" 
+/home/lauren/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/lauren/.dotnet/tools
+
+┌──(lauren㉿Venom)-[~]
+└─$ echo "${PATH}" | tr ':' '\n'
+/home/lauren/.local/bin
+/usr/local/sbin
+/usr/sbin
+/sbin
+/usr/local/bin
+/usr/bin
+/bin
+/usr/local/games
+/usr/games
+/snap/bin
+/home/lauren/.dotnet/tools
+
+┌──(lauren㉿Venom)-[~]
+└─$ alias
+alias diff='diff --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -l'
+alias ls='ls --color=auto'
+
+┌──(lauren㉿Venom)-[~]
+└─$ 
+-----------------------------------------------------------------------------------------------------------------------------
